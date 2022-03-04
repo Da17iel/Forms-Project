@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-nav * {
+nav .navItem {
     @apply p-2 m-4 bg-blue-600 text-white font-bold;
 }
 

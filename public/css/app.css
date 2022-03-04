@@ -628,9 +628,6 @@ select {
 .z-50 {
   z-index: 50;
 }
-.row-auto {
-  grid-row: auto;
-}
 .m-4 {
   margin: 1rem;
 }
@@ -686,17 +683,14 @@ select {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.ml-6 {
+  margin-left: 1.5rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
 .mt-1 {
   margin-top: 0.25rem;
-}
-.mr-4 {
-  margin-right: 1rem;
-}
-.ml-6 {
-  margin-left: 1.5rem;
 }
 .block {
   display: block;
@@ -1184,7 +1178,7 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
-nav * {
+nav .navItem {
   margin: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));

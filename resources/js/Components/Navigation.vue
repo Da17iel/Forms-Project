@@ -1,9 +1,9 @@
 <template>
     <nav class="p-4 flex justify-center content-center">
-        <Link href="/" class="p-2 m-4 bg-blue-600">Home</Link>
-        <Link href="/about-us">About us</Link>
-        <Link href="/login">Login</Link>
-        <Link href="/register">Register</Link>
+        <Link href="/" class="navItem">Home</Link>
+        <Link href="/about-us" class="navItem">About us</Link>
+        <Link href="/login" class="navItem">Login</Link>
+        <Link href="/register" class="navItem">Register</Link>
     </nav>
 </template>
 
