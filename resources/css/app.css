@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 nav .navItem {
-    @apply p-2 m-4 bg-blue-600 text-white font-bold;
+    @apply px-4;
 }
 
 h1 {
