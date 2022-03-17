@@ -619,6 +619,12 @@ select {
 .left-0 {
   left: 0px;
 }
+.top-2 {
+  top: 0.5rem;
+}
+.right-2 {
+  right: 0.5rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -731,9 +737,6 @@ select {
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.min-h-\[74vh\] {
-  min-height: 74vh;
 }
 .w-5 {
   width: 1.25rem;
@@ -861,6 +864,9 @@ select {
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
+.place-self-end {
+  place-self: end;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -938,6 +944,14 @@ select {
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+}
+.bg-sky-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 .fill-current {
   fill: currentColor;
@@ -1235,6 +1249,43 @@ a:hover {
 a:active {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+main {
+  margin-left: 3rem;
+  min-height: 80vh;
+  padding-top: 1rem;
+}
+.ForumNav {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+.ForumNav > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.ForumNav {
+  padding-top: 0.5rem;
+}
+.ForumNav * {
+  padding: 0.5rem;
+}
+.ForumNav a {
+  border-width: 2px;
+}
+footer div p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+footer div div {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+footer div a {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;

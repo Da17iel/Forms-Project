@@ -1,35 +1,35 @@
 <template>
-  <footer class="pt-2 pb-4 mt-6 w-full bg-gray-100 flex flex-row space-x-16 justify-center">
+  <footer class="pt-2 pb-4 mt-6 w-full bg-gray-200 flex flex-row space-x-16 justify-center">
       <div class="flex flex-col">
           <p>Impressum</p>
-          <div class="ml-2 flex flex-col">
-              <Link href="/about-us">About us</Link>
-              <Link href="/login">Login</Link>
-              <Link href="/register">Register</Link>
+          <div>
+              <Link href="/about-us">Über uns</Link>
+              <Link href="/login">Anmelden</Link>
+              <Link href="/register">Registrieren</Link>
           </div>
       </div>
       <div class="flex flex-col">
           <p>Kontakt</p>
-          <div class="ml-2 flex flex-col">
+          <div>
               <Link href="/about-us">Standort</Link>
-              <Link href="/login">Login</Link>
-              <Link href="/register">Register</Link>
+              <Link href="/login">Anmelden</Link>
+              <Link href="/register">Registrieren</Link>
           </div>
       </div>
       <div class="flex flex-col">
-          <p>Zukünftige Projekte</p>
-          <div class="ml-2 flex flex-col">
+          <p>Projekte</p>
+          <div>
               <Link href="/about-us">Standort</Link>
-              <Link href="/login">Login</Link>
-              <Link href="/register">Register</Link>
+              <Link href="/login">Anmelden</Link>
+              <Link href="/register">Registrieren</Link>
           </div>
       </div>
       <div class="flex flex-col">
           <p>Weiteres</p>
-          <div class="ml-2 flex flex-col">
+          <div>
               <Link href="/about-us">Standort</Link>
-              <Link href="/login">Login</Link>
-              <Link href="/register">Register</Link>
+              <Link href="/login">Anmelden</Link>
+              <Link href="/register">Registrieren</Link>
           </div>
       </div>
   </footer>

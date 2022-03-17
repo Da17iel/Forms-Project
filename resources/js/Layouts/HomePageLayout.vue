@@ -4,15 +4,15 @@
         <Navigation />
     </header>
 
-    <div class="pt-4 ml-12 min-h-[74vh]">
+    <main>
         <slot />
-    </div>
+    </main>
 
     <Footer />
 </template>
 
 <script>
-import Navigation from '../Components/HomePageNavigation';
+import Navigation from '@/Components/HomePageNavigation';
 import { Link } from "@inertiajs/inertia-vue3";
 import Footer from "@/Components/Footer.vue";
 export default {

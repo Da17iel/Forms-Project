@@ -24,6 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/forum', function () {
+    return Inertia::render('ForumStarterPage');
+});
+
 Route::get('/about-us', function () {
     return Inertia::render('About');
 });
