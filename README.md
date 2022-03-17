@@ -4,12 +4,25 @@ My main goal with this project is to gain experience with the frameworks i used.
 ## Frameworks
 This Project contains frameworks like [Laravel](https://laravel.com/docs/9.x), [Laravel Brezze](https://laravel.com/docs/9.x/starter-kits#breeze-and-inertia), [InertiaJs](https://inertiajs.com/), [VueJs](https://vuejs.org/), [Tailwindcss](https://tailwindcss.com/). 
 ## Installation on a Server
-There are a few steps you need to follow to install this on your Webserver. 
+Here are the requirements for the webserver:
 <ul>
+    <li>A Database must be available</li>
+    <li>Php and NodeJs must be installed on the System</li>
+    <li>Php File Extensions must be enabled (Uncomment in php.ini extension=fileinfo)</li>
+    <li>The MySQL Driver should be enables if you have a MySQL DataBase (Uncomment in php.ini extension=pdo_mysql)</li>
     <li>Rename the .env.example to .env</li>
+    
+</ul>
+
+Now you can start to configure the Project
+<ul>
     <li>Fill out your Information on the .env file. Including Database</li>
     <li>Open a cmd and go to the Project Location</li>
+    <li>Run the Command <code>npm install</code></li>
+    <li>Run the Command <code>composer install</code></li>
+    <li>Run <code>php artisan key:generate</code></li>
     <li>Run the Command "php artisan migrate:fresh". This will create all the tables on you DB</li>
+    <li>Then run <code>php artisan serve</code> to start the Webserver</li>
 </ul>
 
 After that is done you should be able to start up your Webserver and let it run.
