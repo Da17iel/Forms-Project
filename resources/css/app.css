@@ -3,9 +3,13 @@
 @import 'tailwindcss/utilities';
 
 nav .navItem {
-    @apply px-4;
+    @apply px-4 hover:text-sky-400 ease-out duration-200;
 }
 
 h1 {
     @apply text-3xl;
+}
+
+a {
+    @apply text-lime-500 hover:text-lime-700 active:text-red-500;
 }

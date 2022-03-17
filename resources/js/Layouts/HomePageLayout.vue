@@ -4,7 +4,7 @@
         <Navigation />
     </header>
 
-    <div class="pt-4 ml-12 min-h-[75vh]">
+    <div class="pt-4 ml-12 min-h-[74vh]">
         <slot />
     </div>
 
