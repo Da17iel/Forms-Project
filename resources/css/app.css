@@ -15,7 +15,7 @@ a {
 }
 
 main {
-    @apply pt-4 ml-12 min-h-[80vh];
+    @apply pt-4 ml-12 mr-12 min-h-[80vh];
 }
 
 .ForumNav {
