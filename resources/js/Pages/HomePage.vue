@@ -50,18 +50,18 @@
             </div>
 
         </div>
+
     </Layout>
 </template>
 
 <script>
 import Layout from '@/Layouts/HomePageLayout.vue';
-import {Link} from "@inertiajs/inertia-vue3";
 
 export default {
     name: 'HomePage',
     components: {
-        Layout, Link
-    }
+        Layout
+    },
 
 }
 </script>
