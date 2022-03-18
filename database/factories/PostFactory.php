@@ -23,6 +23,7 @@ class PostFactory extends Factory
             "user_id" => User::all()->random(),
             "description" => $this->faker->sentence(6),
             "content" => $this->faker->paragraph(),
+            "replies" => $this->faker->numberBetween(0, 200),
         ];
     }
 }

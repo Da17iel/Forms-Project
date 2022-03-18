@@ -3,10 +3,10 @@
         <div class="w-full h-full">
             <table>
                 <tr>
-                    <th>Zustand</th>
-                    <th>Titel</th>
-                    <th>Author</th>
-                    <th>Antworten</th>
+                    <th class="w-32">Zustand</th>
+                    <th class="w-1/2">Titel</th>
+                    <th class="w-1/4">Author</th>
+                    <th class="w-48">Antworten</th>
                     <th>Datum</th>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                     <td><img src="https://www.sugarmember.com/assets/img/fav-icon.ico"
                              alt="Stern" class="w-20 h-20"></td>
                     <td>
-                        <p class="font-bold">Ein sehr kreativer Titel</p>
+                        <p class="font-bold">Lorem ipsum dolor sit amet</p>
                         Ansichten: <i>15615</i>
                     </td>
                     <td>Sarah Meier</td>
@@ -49,7 +49,7 @@
                     <td><img src="http://www.abc4it.com/start/images/favorite.ico"
                              alt="Stern" class="w-20 h-20"></td>
                     <td>
-                        <p class="font-bold">Ein sehr kreativer Titel</p>
+                        <p class="font-bold">Lorem ipsum dolor sit amet</p>
                         Ansichten: <i>15615</i>
                     </td>
                     <td>Sarah Meier</td>
@@ -68,6 +68,12 @@ export default {
     name: "ForumStarterPage",
     components: {
         Layout,
+    },
+    data() {
+        return {
+            "show": false,
+
+        }
     }
 }
 </script>
