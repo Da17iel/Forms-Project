@@ -21,7 +21,7 @@ Now you can start to configure the Project
     <li>Run the Command <code>npm install</code></li>
     <li>Run the Command <code>composer install</code></li>
     <li>Run <code>php artisan key:generate</code></li>
-    <li>Run the Command "php artisan migrate:fresh". This will create all the tables on you DB</li>
+    <li>Run the Command <code>php artisan migrate:fresh</code>. This will create all the tables on you DB</li>
     <li>Then run <code>php artisan serve</code> to start the Webserver</li>
 </ul>
 
