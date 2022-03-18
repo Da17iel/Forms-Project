@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\categorie;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -24,6 +25,7 @@ class PostFactory extends Factory
             "description" => $this->faker->sentence(6),
             "content" => $this->faker->paragraph(),
             "replies" => $this->faker->numberBetween(0, 200),
+            "category_id" => categorie::all()->random(),
         ];
     }
 }

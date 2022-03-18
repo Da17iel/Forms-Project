@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string("description")->unique();
             $table->longText("content");
             $table->integer('replies');
+            $table->foreignId('category_id')->constrained();
             $table->timestamps();
         });
     }
