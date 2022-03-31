@@ -20,7 +20,9 @@ return new class extends Migration
             $table->string("description");
             $table->longText("content");
             $table->integer('replies');
+            $table->integer("views");
             $table->foreignId('category_id')->constrained();
+            $table->date("creationDate");
             $table->timestamps();
         });
     }

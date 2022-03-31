@@ -21,40 +21,16 @@
                     <td>17.03.2022</td>
                 </tr>
 
-                <tr>
+                <tr v-for="post in posts.data">
                     <td><img src="https://www.sugarmember.com/assets/img/fav-icon.ico"
                              alt="Stern" class="w-20 h-20"></td>
                     <td>
-                        <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                        Ansichten: <i>15615</i>
+                        <p class="font-bold">{{ post.title }}</p>
+                        Ansichten: <i>{{ post.views }}</i>
                     </td>
-                    <td>Sarah Meier</td>
-                    <td>15</td>
-                    <td>17.03.2022</td>
-                </tr>
-
-                <tr>
-                    <td><img src="https://iconarchive.com/download/i86026/graphicloads/100-flat-2/arrow-up.ico"
-                             alt="Stern" class="w-20 h-20"></td>
-                    <td>
-                        <p class="font-bold">Ein sehr kreativer Titel</p>
-                        Ansichten: <i>15615</i>
-                    </td>
-                    <td>Sarah Meier</td>
-                    <td>15</td>
-                    <td>17.03.2022</td>
-                </tr>
-
-                <tr>
-                    <td><img src="http://www.abc4it.com/start/images/favorite.ico"
-                             alt="Stern" class="w-20 h-20"></td>
-                    <td>
-                        <p class="font-bold">Lorem ipsum dolor sit amet</p>
-                        Ansichten: <i>15615</i>
-                    </td>
-                    <td>Sarah Meier</td>
-                    <td>15</td>
-                    <td>17.03.2022</td>
+                    <td>{{ post.user_id }}</td>
+                    <td>{{ post.replies }}</td>
+                    <td>{{ post.created_at }}</td>
                 </tr>
             </table>
         </div>
@@ -74,6 +50,9 @@ export default {
             "show": false,
 
         }
+    },
+    props: {
+        posts: Object,
     }
 }
 </script>

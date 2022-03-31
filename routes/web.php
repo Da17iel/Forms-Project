@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\ForumFunctions;
 use Inertia\Inertia;
 
 /*
@@ -24,9 +25,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/forum', function () {
-    return Inertia::render('ForumStarterPage');
-});
+Route::get('/forum', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
 
 Route::get('/about-us', function () {
     return Inertia::render('About');
@@ -35,5 +34,8 @@ Route::get('/about-us', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Route::get('/functions', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
+
 
 require __DIR__.'/auth.php';

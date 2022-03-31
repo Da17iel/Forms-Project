@@ -24,8 +24,10 @@ class PostFactory extends Factory
             "user_id" => User::all()->random(),
             "description" => $this->faker->sentence(6),
             "content" => $this->faker->paragraph(),
-            "replies" => $this->faker->numberBetween(0, 200),
+            "replies" => $this->faker->numberBetween(0, 15),
+            "views" => $this->faker->numberBetween(0, 500),
             "category_id" => Category::all()->random(),
+            "creationDate" => date("Y.m.d"),
         ];
     }
 }

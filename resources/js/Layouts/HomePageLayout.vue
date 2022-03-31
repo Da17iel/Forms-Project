@@ -1,6 +1,7 @@
 <template>
     <header class="pt-6 bg-gray-100 w-full flex flex-col">
         <h1 class="text-center pb-6">Daniel's Testforum</h1>
+        <p class="text-center">Welcome Back {{ $page.props.testing.testing }}</p>
         <Navigation />
     </header>
 
