@@ -27,6 +27,8 @@ Route::get('/', function () {
 
 Route::get('/forum', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
 
+Route::get('/forum/posts/', [ForumFunctions::class, 'Post']);
+
 Route::get('/about-us', function () {
     return Inertia::render('About', [
         'Name' => "Testing",

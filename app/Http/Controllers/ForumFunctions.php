@@ -12,8 +12,14 @@ class ForumFunctions extends Controller
     public function StarterPage()
     {
         return Inertia::render('ForumStarterPage', [
-            'posts' => Post::paginate(),
-            'users' => User::paginate(),
+            'posts' => Post::all(),
+            //'users' => User::paginate(),
+        ]);
+    }
+
+    public function Post() {
+        return Inertia::render('SinglePost', [
+            //'post' => Post::where,
         ]);
     }
 }

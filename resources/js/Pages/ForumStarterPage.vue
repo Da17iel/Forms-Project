@@ -10,11 +10,11 @@
                     <th>Datum</th>
                 </tr>
 
-                <tr v-for="post in posts.data">
+                <tr v-for="post in posts" :key="post.id">
                     <td><img :src="ImageLink(post.IconPath)"
                              alt="Icon" class="w-20 h-20"></td>
                     <td>
-                        <p class="font-bold"><a :href="LinkToTitle(post.title)">{{ post.title }}</a></p>
+                        <p class="font-bold"><a :href="TitleLink(post.slug)">{{ post.title }}</a></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
                     <td>{{ post.user_id }}</td>
@@ -42,14 +42,14 @@ export default {
     },
     props: {
         posts: Object,
-        users: Object,
+        Test: Object,
     },
     methods: {
         ImageLink(IconPath) {
             return IconPath;
         },
         TitleLink(LinkToTitle) {
-            return LinkToTitle;
+            return "/forum/posts/" + LinkToTitle;
         }
     }
 }

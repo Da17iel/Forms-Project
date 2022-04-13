@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("IconPath");
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string("title")->unique();
+            $table->string("slug")->unique();
             $table->string("description");
             $table->longText("content");
             $table->integer('replies');

@@ -25,6 +25,7 @@ class PostFactory extends Factory
         return [
             "IconPath" => $SamplePictures[$ArrayKey],
             "title" => $this->faker->words(3, true),
+            "slug" => $this->faker->slug(),
             "user_id" => User::all()->random(),
             "description" => $this->faker->sentence(6),
             "content" => $this->faker->paragraph(),

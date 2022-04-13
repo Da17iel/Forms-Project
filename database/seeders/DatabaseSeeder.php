@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         Category::factory(5)->create();
 
         // Tables with Foreign Key
-        Post::factory(100)->create();
-        Comment::factory(500)->create();
+        Post::factory(30)->create();
+        Comment::factory(100)->create();
     }
 }
