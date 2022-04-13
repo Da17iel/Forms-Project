@@ -974,6 +974,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
 .fill-current {
   fill: currentColor;
 }
@@ -982,6 +986,9 @@ select {
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1056,6 +1063,9 @@ select {
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1087,6 +1097,10 @@ select {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .font-medium {
   font-weight: 500;
