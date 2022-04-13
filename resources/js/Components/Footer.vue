@@ -11,25 +11,23 @@
       <div class="flex flex-col">
           <p>Kontakt</p>
           <div>
-              <Link href="/about-us">Standort</Link>
-              <Link href="/login">Anmelden</Link>
-              <Link href="/register">Registrieren</Link>
+              <Link href="/about-us">Kontaktieren</Link>
           </div>
       </div>
       <div class="flex flex-col">
           <p>Projekte</p>
           <div>
-              <Link href="/about-us">Standort</Link>
-              <Link href="/login">Anmelden</Link>
-              <Link href="/register">Registrieren</Link>
+              <a href="https://github.com/Da17iel/DanielNotes" target="_blank">Mein Notizenprogramm</a>
+              <a href="https://github.com/Da17iel/ForumProject" target="_blank">Forum Projekt</a>
+              <a href="https://github.com/Da17iel/failing-attempt-to-do-the-cookie-clicker" target="_blank">Rookie Cookie Clicker</a>
           </div>
       </div>
       <div class="flex flex-col">
           <p>Weiteres</p>
           <div>
-              <Link href="/about-us">Standort</Link>
-              <Link href="/login">Anmelden</Link>
-              <Link href="/register">Registrieren</Link>
+              <a href="https://tbz.ch/" target="_blank">Berufsschule</a>
+              <a href="https://www.bag.admin.ch/bag/de/home.html" target="_blank">Bag</a>
+              <a href="https://megacad.ch/" target="_blank">MegaCAD</a>
           </div>
       </div>
   </footer>
