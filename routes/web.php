@@ -27,13 +27,7 @@ Route::get('/', function () {
 
 Route::get('/forum', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
 
-Route::get('/forum/posts/', [ForumFunctions::class, 'Post']);
-
-Route::get('/about-us', function () {
-    return Inertia::render('About', [
-        'Name' => "Testing",
-    ]);
-});
+Route::get('/forum/posts/{post:slug}', [ForumFunctions::class, 'SinglePost']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

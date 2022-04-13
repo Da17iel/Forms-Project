@@ -1,8 +1,6 @@
 <template>
     <Layout>
-        <div>
-            <h1>Hello this is a testpage </h1>
-        </div>
+            <h1>{{ post.title }}</h1>
     </Layout>
 </template>
 
@@ -10,6 +8,9 @@
 import Layout from '@/Layouts/ForumLayout.vue';
 export default {
     name: "SinglePost",
+    props: {
+        post: Object,
+    },
     components: {
         Layout,
     }

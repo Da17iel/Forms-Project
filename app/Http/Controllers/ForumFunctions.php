@@ -17,9 +17,9 @@ class ForumFunctions extends Controller
         ]);
     }
 
-    public function Post() {
+    public function SinglePost(Post $post) {
         return Inertia::render('SinglePost', [
-            //'post' => Post::where,
+            'post' => $post,
         ]);
     }
 }
