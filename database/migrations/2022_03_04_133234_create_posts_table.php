@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string("IconPath");
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string("title")->unique();
             $table->string("description");

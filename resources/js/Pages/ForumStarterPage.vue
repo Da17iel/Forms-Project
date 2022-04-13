@@ -9,32 +9,21 @@
                     <th class="w-48">Antworten</th>
                     <th>Datum</th>
                 </tr>
-                <tr>
-                    <td><img src="http://www.abc4it.com/start/images/favorite.ico"
-                             alt="Stern" class="w-20 h-20"></td>
-                    <td>
-                        <p class="font-bold">Ein sehr kreativer Titel</p>
-                        Ansichten: <i>15615</i>
-                    </td>
-                    <td>Sarah Meier</td>
-                    <td>15</td>
-                    <td>17.03.2022</td>
-                </tr>
 
                 <tr v-for="post in posts.data">
-                    <td><img src="https://www.sugarmember.com/assets/img/fav-icon.ico"
-                             alt="Stern" class="w-20 h-20"></td>
+                    <td><img :src="ImageLink(post.IconPath)"
+                             alt="Icon" class="w-20 h-20"></td>
                     <td>
-                        <p class="font-bold">{{ post.title }}</p>
+                        <p class="font-bold"><a :href="LinkToTitle(post.title)">{{ post.title }}</a></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
                     <td>{{ post.user_id }}</td>
                     <td>{{ post.replies }}</td>
                     <td>{{ post.created_at }}</td>
                 </tr>
+
             </table>
         </div>
-
     </Layout>
 </template>
 
@@ -48,11 +37,20 @@ export default {
     data() {
         return {
             "show": false,
-
+            "randomstuff": "img/SamplePicture2.ico",
         }
     },
     props: {
         posts: Object,
+        users: Object,
+    },
+    methods: {
+        ImageLink(IconPath) {
+            return IconPath;
+        },
+        TitleLink(LinkToTitle) {
+            return LinkToTitle;
+        }
     }
 }
 </script>

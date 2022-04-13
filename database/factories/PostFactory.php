@@ -19,7 +19,11 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $SamplePictures = array("img/SamplePicture1.ico", "img/SamplePicture2.ico", "img/SamplePicture3.ico", "img/SamplePicture4.ico");
+        $ArrayKey = array_rand($SamplePictures);
+
         return [
+            "IconPath" => $SamplePictures[$ArrayKey],
             "title" => $this->faker->words(3, true),
             "user_id" => User::all()->random(),
             "description" => $this->faker->sentence(6),

@@ -28,14 +28,14 @@ Route::get('/', function () {
 Route::get('/forum', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
 
 Route::get('/about-us', function () {
-    return Inertia::render('About');
+    return Inertia::render('About', [
+        'Name' => "Testing",
+    ]);
 });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-//Route::get('/functions', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
 
 
 require __DIR__.'/auth.php';
