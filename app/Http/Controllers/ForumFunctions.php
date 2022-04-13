@@ -20,6 +20,7 @@ class ForumFunctions extends Controller
     public function SinglePost(Post $post) {
         return Inertia::render('SinglePost', [
             'post' => $post,
+            'comments' => $post->comments,
         ]);
     }
 }
