@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <div class="w-full h-full">
-            <table>
+            <table class="shadow">
                 <tr>
                     <th class="w-32">Zustand</th>
                     <th class="w-1/2">Titel</th>
@@ -17,12 +17,12 @@
                         <p class="font-bold"><Link :href="TitleLink(post.slug)">{{ post.title }}</Link></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
-                    <td>{{ post.user_id }}</td>
+                    <td>{{ users.data[(post.user_id - 1)].name }}</td>
                     <td>{{ post.replies }}</td>
                     <td>{{ post.created_at }}</td>
                 </tr>
-
             </table>
+
         </div>
     </Layout>
 </template>
@@ -41,7 +41,7 @@ export default {
     },
     props: {
         posts: Object,
-        Test: Object,
+        users: Object,
     },
     methods: {
         ImageLink(IconPath) {

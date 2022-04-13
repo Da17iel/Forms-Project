@@ -13,7 +13,7 @@ class ForumFunctions extends Controller
     {
         return Inertia::render('ForumStarterPage', [
             'posts' => Post::all(),
-            //'users' => User::paginate(),
+            'users' => User::all(),
         ]);
     }
 
