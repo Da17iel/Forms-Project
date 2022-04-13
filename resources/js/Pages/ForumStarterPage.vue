@@ -14,7 +14,7 @@
                     <td><img :src="ImageLink(post.IconPath)"
                              alt="Icon" class="w-20 h-20"></td>
                     <td>
-                        <p class="font-bold"><a :href="TitleLink(post.slug)">{{ post.title }}</a></p>
+                        <p class="font-bold"><Link :href="TitleLink(post.slug)">{{ post.title }}</Link></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
                     <td>{{ post.user_id }}</td>
