@@ -17,8 +17,14 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $ProfilePicArray = array('\SampleProfilePictures\ProfilePicture1.png',
+            '\SampleProfilePictures\ProfilePicture2.png', '\SampleProfilePictures\ProfilePicture3.png',
+            '\SampleProfilePictures\ProfilePicture4.png');
+        $ProfilePicIndex = array_rand($ProfilePicArray);
+
         return [
-            'name' => $this->faker->name(),
+            'ProfilePicture' => $ProfilePicArray[$ProfilePicIndex],
+            'username' => $this->faker->userName(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password

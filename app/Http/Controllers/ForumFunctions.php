@@ -22,6 +22,7 @@ class ForumFunctions extends Controller
             'post' => $post,
             'comments' => $post->comments,
             'users' => User::all(),
+            'author' => $post->author,
         ]);
     }
 }

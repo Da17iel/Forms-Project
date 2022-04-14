@@ -2,7 +2,7 @@
     <Layout>
         <div class="p-4 border rounded bg-gray-50">
             <h1 class="text-4xl">{{ post.title }}</h1>
-            <p class="mt-4">Autor/in: <a href="">{{ post.user_id }}</a></p>
+            <p class="mt-4">Von: <a :href="AuthorLink(author.username)">{{ author.username }}</a></p>
             <p class="mt-2">{{ post.content }}</p>
         </div>
 
@@ -10,9 +10,9 @@
 
         <div v-for="comment in comments" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
-                <img src="/SampleProfilePictures/ProfilePicture1.png"
+                <img :src="ProfilePicUrl(users[(comment.user_id - 1)].ProfilePicture)"
                      alt="Profile Picture" class="rounded h-12">
-                <p class="ml-4 self-center">{{ users[(comment.user_id - 1)].name }}</p>
+                <p class="ml-4 self-center">{{ users[(comment.user_id - 1)].username }}</p>
             </div>
             <div class="comment-body">
                 <p class="text-lg">{{ comment.content }}</p>
@@ -31,9 +31,18 @@ export default {
         post: Object,
         comments: Object,
         users: Object,
+        author: Object,
     },
     components: {
         Layout,
+    },
+    methods: {
+        ProfilePicUrl(URL) {
+            return URL;
+        },
+        AuthorLink(URL) {
+            return "/users/" + URL;
+        },
     }
 }
 </script>

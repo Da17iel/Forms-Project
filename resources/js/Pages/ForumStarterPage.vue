@@ -17,7 +17,7 @@
                         <p class="font-bold"><Link :href="TitleLink(post.slug)">{{ post.title }}</Link></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
-                    <td>{{ users[(post.user_id - 1)].name }}</td>
+                    <td>{{ users[(post.user_id - 1)].username }}</td>
                     <td>{{ post.replies }}</td>
                     <td>{{ post.created_at }}</td>
                 </tr>
