@@ -20320,7 +20320,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     posts: Object,
-    users: Object
+    users: Object,
+    comments: Object
   },
   methods: {
     ImageLink: function ImageLink(IconPath) {
@@ -20384,7 +20385,7 @@ __webpack_require__.r(__webpack_exports__);
     ProfilePicUrl: function ProfilePicUrl(URL) {
       return URL;
     },
-    AuthorLink: function AuthorLink(URL) {
+    UserLink: function UserLink(URL) {
       return "/users/" + URL;
     }
   }
@@ -22046,7 +22047,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* TEXT */
         )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.users[post.user_id - 1].username), 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.replies), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Counts how many elements with this id exists in array comments "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.comments.filter(function (x) {
+          return x.post_id == post.id;
+        }).length), 1
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.created_at), 1
         /* TEXT */
@@ -22192,10 +22195,11 @@ var _hoisted_10 = ["src"];
 var _hoisted_11 = {
   "class": "ml-4 self-center"
 };
-var _hoisted_12 = {
+var _hoisted_12 = ["href"];
+var _hoisted_13 = {
   "class": "comment-body"
 };
-var _hoisted_13 = {
+var _hoisted_14 = {
   "class": "text-lg"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -22206,7 +22210,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-        href: $options.AuthorLink($props.author.username)
+        href: $options.UserLink($props.author.username)
       }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.author.username), 9
       /* TEXT, PROPS */
       , _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.content), 1
@@ -22218,9 +22222,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "rounded h-12"
         }, null, 8
         /* PROPS */
-        , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.users[comment.user_id - 1].username), 1
-        /* TEXT */
-        )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.content), 1
+        , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+          href: $options.UserLink($props.users[comment.user_id - 1].username),
+          "class": "text-black"
+        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.users[comment.user_id - 1].username), 9
+        /* TEXT, PROPS */
+        , _hoisted_12)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.content), 1
         /* TEXT */
         )])]);
       }), 256

@@ -18,7 +18,8 @@
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
                     <td>{{ users[(post.user_id - 1)].username }}</td>
-                    <td>{{ post.replies }}</td>
+                    <!-- Counts how many elements with this id exists in array comments -->
+                    <td>{{ comments.filter(x => x.post_id == post.id).length  }}</td>
                     <td>{{ post.created_at }}</td>
                 </tr>
             </table>
@@ -41,6 +42,7 @@ export default {
     props: {
         posts: Object,
         users: Object,
+        comments: Object,
     },
     methods: {
         ImageLink(IconPath) {

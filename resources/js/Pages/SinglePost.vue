@@ -2,7 +2,7 @@
     <Layout>
         <div class="p-4 border rounded bg-gray-50">
             <h1 class="text-4xl">{{ post.title }}</h1>
-            <p class="mt-4">Von: <a :href="AuthorLink(author.username)">{{ author.username }}</a></p>
+            <p class="mt-4">Von: <a :href="UserLink(author.username)">{{ author.username }}</a></p>
             <p class="mt-2">{{ post.content }}</p>
         </div>
 
@@ -12,7 +12,11 @@
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
                 <img :src="ProfilePicUrl(users[(comment.user_id - 1)].ProfilePicture)"
                      alt="Profile Picture" class="rounded h-12">
-                <p class="ml-4 self-center">{{ users[(comment.user_id - 1)].username }}</p>
+                <p class="ml-4 self-center">
+                    <a :href="UserLink(users[(comment.user_id - 1)].username)" class="text-black">
+                        {{ users[(comment.user_id - 1)].username }}
+                    </a>
+                </p>
             </div>
             <div class="comment-body">
                 <p class="text-lg">{{ comment.content }}</p>
@@ -40,7 +44,7 @@ export default {
         ProfilePicUrl(URL) {
             return URL;
         },
-        AuthorLink(URL) {
+        UserLink(URL) {
             return "/users/" + URL;
         },
     }
