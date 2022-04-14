@@ -12,7 +12,7 @@
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
                 <img src="/SampleProfilePictures/ProfilePicture1.png"
                      alt="Profile Picture" class="rounded h-12">
-                <p class="ml-4 self-center">Daniel Greil</p>
+                <p class="ml-4 self-center">{{ users[(comment.user_id - 1)].name }}</p>
             </div>
             <div class="comment-body">
                 <p class="text-lg">{{ comment.content }}</p>
@@ -30,6 +30,7 @@ export default {
     props: {
         post: Object,
         comments: Object,
+        users: Object,
     },
     components: {
         Layout,

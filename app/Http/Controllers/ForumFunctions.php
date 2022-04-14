@@ -21,6 +21,7 @@ class ForumFunctions extends Controller
         return Inertia::render('SinglePost', [
             'post' => $post,
             'comments' => $post->comments,
+            'users' => User::all(),
         ]);
     }
 }
