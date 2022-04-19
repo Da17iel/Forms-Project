@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use App\Models\Comment;
+use App\Models\User;
 use Inertia\Inertia;
 
 class CategoryController extends Controller
 {
     public function ShowCategory(Category $category) {
-        return Inertia::render('SingleCategory', [
+        return Inertia::render('ForumTableView', [
             'category' => $category,
             'posts' => $category->posts,
+            'users' => User::all(),
         ]);
     }
 

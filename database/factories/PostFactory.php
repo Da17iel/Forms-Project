@@ -19,7 +19,7 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-        $SamplePictures = array("SampleIcons/SamplePicture1.ico", "SampleIcons/SamplePicture2.ico", "SampleIcons/SamplePicture3.ico", "SampleIcons/SamplePicture4.ico");
+        $SamplePictures = array("/SampleIcons/SamplePicture1.ico", "/SampleIcons/SamplePicture2.ico", "/SampleIcons/SamplePicture3.ico", "/SampleIcons/SamplePicture4.ico");
         $ArrayKey = array_rand($SamplePictures);
 
         return [

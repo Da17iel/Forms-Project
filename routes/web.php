@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserConroller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -29,7 +30,7 @@ Route::get('/', function () {
 
 Route::get('/forum', [ForumFunctions::class, 'StarterPage']);
 
-Route::get('/forum/posts/{post:slug}', [ForumFunctions::class, 'SinglePost']);
+Route::get('/forum/post/{post:slug}', [PostController::class, 'SinglePost']);
 
 Route::get('/forum/user/{user:username}', [UserConroller::class, 'UserProfile']);
 

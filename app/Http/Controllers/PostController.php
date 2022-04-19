@@ -5,9 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Models\User;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
+    public function SinglePost(Post $post) {
+        return Inertia::render('SinglePost', [
+            'post' => $post,
+            'comments' => $post->comments,
+            'users' => User::all(),
+            'author' => $post->author,
+            'category' => $post->category
+        ]);
+    }
     /**
      * Display a listing of the resource.
      *

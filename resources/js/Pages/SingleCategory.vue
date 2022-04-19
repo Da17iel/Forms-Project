@@ -6,7 +6,7 @@
 
         <div>
             <div v-for="post in posts" :key="post.id">
-                <p class="text-2xl"><Link :href="'/forum/posts/' + post.slug">{{ post.title }}</Link></p>
+                <p class="text-2xl"><Link :href="'/forum/post/' + post.slug">{{ post.title }}</Link></p>
                 <p>{{ post.description }}</p>
             </div>
         </div>

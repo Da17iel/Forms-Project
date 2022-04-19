@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
     {
         // Tables without Foreign Key
         User::factory(10)->create();
-        Category::factory(5)->create();
+        $this->call(CategorySeeder::class);
+        Category::factory(3)->create();
 
         // Tables with Foreign Key
         Post::factory(30)->create();
