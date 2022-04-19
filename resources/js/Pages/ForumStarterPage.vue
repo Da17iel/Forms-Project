@@ -55,11 +55,6 @@ export default {
     components: {
         Layout,
     },
-    data() {
-        return {
-            "show": false,
-        }
-    },
     props: {
         posts: Object,
         users: Object,

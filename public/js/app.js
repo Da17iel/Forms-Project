@@ -20313,11 +20313,6 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Layout: _Layouts_ForumLayout_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  data: function data() {
-    return {
-      "show": false
-    };
-  },
   props: {
     posts: Object,
     users: Object,
