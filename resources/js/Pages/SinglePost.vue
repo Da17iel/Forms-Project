@@ -2,7 +2,7 @@
     <Layout>
         <div class="p-4 border rounded bg-gray-50">
             <h1 class="text-4xl">{{ post.title }}</h1>
-            <p class="mt-4">Von: <a :href="UserLink(author.username)">{{ author.username }}</a></p>
+            <p class="mt-4">Von: <Link :href="UserLink(author.username)">{{ author.username }}</Link></p>
             <p class="mt-2">{{ post.content }}</p>
         </div>
 
@@ -13,9 +13,9 @@
                 <img :src="ProfilePicUrl(users[(comment.user_id - 1)].ProfilePicture)"
                      alt="Profile Picture" class="rounded h-12">
                 <p class="ml-4 self-center">
-                    <a :href="UserLink(users[(comment.user_id - 1)].username)" class="text-black">
+                    <Link :href="UserLink(users[(comment.user_id - 1)].username)" class="text-black">
                         {{ users[(comment.user_id - 1)].username }}
-                    </a>
+                    </Link>
                 </p>
             </div>
             <div class="comment-body">
@@ -45,7 +45,7 @@ export default {
             return URL;
         },
         UserLink(URL) {
-            return "/users/" + URL;
+            return "/user/" + URL;
         },
     }
 }
