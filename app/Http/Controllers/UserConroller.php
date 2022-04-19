@@ -10,7 +10,7 @@ class UserConroller extends Controller
 {
     public function UserProfile(User $user) {
         return Inertia::render('SingleUser', [
-           'user' => $user,
+            'user' => $user,
             'UserPosts' => $user->posts,
         ]);
     }

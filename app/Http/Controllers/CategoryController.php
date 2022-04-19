@@ -5,9 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use Inertia\Inertia;
 
 class CategoryController extends Controller
 {
+    public function ShowCategory(Category $category) {
+        return Inertia::render('SingleCategory', [
+            'category' => $category,
+            'posts' => $category->posts,
+        ]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *

@@ -3,6 +3,7 @@
         <div class="p-4 border rounded bg-gray-50">
             <h1 class="text-4xl">{{ post.title }}</h1>
             <p class="mt-4">Von: <Link :href="UserLink(author.username)">{{ author.username }}</Link></p>
+            <p>Kategorie: <Link :href="CategoryLink(category.slug)">{{ category.name }}</Link></p>
             <p class="mt-2">{{ post.content }}</p>
         </div>
 
@@ -36,6 +37,7 @@ export default {
         comments: Object,
         users: Object,
         author: Object,
+        category: Object,
     },
     components: {
         Layout,
@@ -46,6 +48,9 @@ export default {
         },
         UserLink(URL) {
             return "/user/" + URL;
+        },
+        CategoryLink(URL) {
+            return "/category/" + URL;
         },
     }
 }

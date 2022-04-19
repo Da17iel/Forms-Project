@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Post;
 use App\Models\User;
@@ -16,6 +17,7 @@ class ForumFunctions extends Controller
             'posts' => Post::all(),
             'comments' => Comment::all('id', 'post_id', 'comment_id'),
             'users' => User::all(),
+            'categories' => Category::all(),
         ]);
     }
 
@@ -25,6 +27,7 @@ class ForumFunctions extends Controller
             'comments' => $post->comments,
             'users' => User::all(),
             'author' => $post->author,
+            'category' => $post->category
         ]);
     }
 }

@@ -702,6 +702,9 @@ select {
 .mr-12 {
   margin-right: 3rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .block {
   display: block;
 }
@@ -803,6 +806,9 @@ select {
 }
 .w-64 {
   width: 16rem;
+}
+.w-44 {
+  width: 11rem;
 }
 .min-w-\[300px\] {
   min-width: 300px;
