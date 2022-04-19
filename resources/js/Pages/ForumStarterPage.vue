@@ -17,10 +17,15 @@
                         <p class="font-bold"><Link :href="TitleLink(post.slug)">{{ post.title }}</Link></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
-                    <td>{{ users[(post.user_id - 1)].username }}</td>
+                    <td>
+                        <Link :href="GetUserPageLink(users[(post.user_id - 1)].username)" class="text-black">
+                            {{ users[(post.user_id - 1)].username }}
+                        </Link>
+                    </td>
+
                     <!-- Counts how many elements with this id exists in array comments -->
                     <td>{{ comments.filter(x => x.post_id == post.id).length  }}</td>
-                    <td>{{ post.created_at }}</td>
+                    <td>{{ post.creationDate }}</td>
                 </tr>
             </table>
         </div>
@@ -50,7 +55,10 @@ export default {
         },
         TitleLink(LinkToTitle) {
             return "/forum/posts/" + LinkToTitle;
-        }
+        },
+        GetUserPageLink(username) {
+            return "/user/" + username;
+        },
     }
 }
 </script>

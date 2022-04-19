@@ -6,7 +6,7 @@
             <p class="mt-2">{{ post.content }}</p>
         </div>
 
-        <p class="text-2xl pt-10 pb-4">Replies:</p>
+        <p class="text-2xl pt-10 pb-4">Antworten:</p>
 
         <div v-for="comment in comments" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
