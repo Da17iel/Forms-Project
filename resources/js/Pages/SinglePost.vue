@@ -2,8 +2,8 @@
     <Layout>
         <div class="p-4 border rounded bg-gray-50">
             <h1 class="text-4xl">{{ post.title }}</h1>
-            <p class="mt-4">Von: <Link :href="UserLink(author.username)">{{ author.username }}</Link></p>
-            <p>Kategorie: <Link :href="CategoryLink(category.slug)">{{ category.name }}</Link></p>
+            <p class="mt-4">Von: <Link :href="'/forum/user/' + author.username">{{ author.username }}</Link></p>
+            <p>Kategorie: <Link :href="'/forum/category/' + category.slug">{{ category.name }}</Link></p>
             <p class="mt-2">{{ post.content }}</p>
         </div>
 
@@ -11,10 +11,10 @@
 
         <div v-for="comment in comments" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
-                <img :src="ProfilePicUrl(users[(comment.user_id - 1)].ProfilePicture)"
+                <img :src="users[(comment.user_id - 1)].ProfilePicture"
                      alt="Profile Picture" class="rounded h-12">
                 <p class="ml-4 self-center">
-                    <Link :href="UserLink(users[(comment.user_id - 1)].username)" class="text-black">
+                    <Link :href="'/forum/user/' + users[(comment.user_id - 1)].username" class="text-black">
                         {{ users[(comment.user_id - 1)].username }}
                     </Link>
                 </p>
@@ -42,17 +42,6 @@ export default {
     components: {
         Layout,
     },
-    methods: {
-        ProfilePicUrl(URL) {
-            return URL;
-        },
-        UserLink(URL) {
-            return "/user/" + URL;
-        },
-        CategoryLink(URL) {
-            return "/category/" + URL;
-        },
-    }
 }
 </script>
 

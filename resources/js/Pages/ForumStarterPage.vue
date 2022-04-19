@@ -13,23 +13,27 @@
 
                 <tr v-for="post in posts" :key="post.id">
                     <!-- Status -->
-                    <td><img :src="ImageLink(post.IconPath)"
+                    <td><img :src="post.IconPath"
                              alt="Icon" class="w-20 h-20"></td>
 
                     <!-- Title -->
                     <td>
-                        <p class="font-bold"><Link :href="TitleLink(post.slug)">{{ post.title }}</Link></p>
+                        <p class="font-bold"><Link :href="'/forum/posts/' + post.slug">{{ post.title }}</Link></p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
 
                     <!-- Category -->
                     <td>
-                        <p><Link :href="CategoryLink(categories[(post.category_id - 1)].slug)">{{ categories[(post.category_id - 1)].name }}</Link></p>
+                        <p>
+                            <Link :href="'/forum/category/' + categories[(post.category_id - 1)].slug" class="text-black">
+                                {{ categories[(post.category_id - 1)].name }}
+                            </Link>
+                        </p>
                     </td>
 
                     <!-- Author -->
                     <td>
-                        <Link :href="GetUserPageLink(users[(post.user_id - 1)].username)" class="text-black">
+                        <Link :href="'/forum/user/' + users[(post.user_id - 1)].username" class="text-black">
                             {{ users[(post.user_id - 1)].username }}
                         </Link>
                     </td>
@@ -62,20 +66,6 @@ export default {
         comments: Object,
         categories: Object,
     },
-    methods: {
-        ImageLink(IconPath) {
-            return IconPath;
-        },
-        TitleLink(LinkToTitle) {
-            return "/forum/posts/" + LinkToTitle;
-        },
-        GetUserPageLink(username) {
-            return "/user/" + username;
-        },
-        CategoryLink(URL) {
-            return "/category/" + URL;
-        }
-    }
 }
 </script>
 

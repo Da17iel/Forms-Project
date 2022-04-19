@@ -27,13 +27,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/forum', [ForumFunctions::class, 'StarterPage'])->name('page.starter');
+Route::get('/forum', [ForumFunctions::class, 'StarterPage']);
 
 Route::get('/forum/posts/{post:slug}', [ForumFunctions::class, 'SinglePost']);
 
-Route::get('/user/{user:username}', [UserConroller::class, 'UserProfile']);
+Route::get('/forum/user/{user:username}', [UserConroller::class, 'UserProfile']);
 
-Route::get('/category/{category:slug}', [CategoryController::class, 'ShowCategory']);
+Route::get('/forum/category/{category:slug}', [CategoryController::class, 'ShowCategory']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
