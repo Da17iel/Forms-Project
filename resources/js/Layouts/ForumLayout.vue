@@ -8,6 +8,7 @@
         <div class="ForumNav w-1/2">
             <Link href="/forum">Home</Link>
             <p>></p>
+            {{ Testing }}
         </div>
         <div class="w-1/2 place-content-center">
             <Link v-if="LoggedInd">My Profile</Link>
@@ -26,6 +27,9 @@ import { Link } from "@inertiajs/inertia-vue3";
 import Footer from '@/Components/Footer.vue';
 export default {
     name: 'Layout',
+    props: {
+        Testing,
+    },
     components: {
         Link, Footer,
     },

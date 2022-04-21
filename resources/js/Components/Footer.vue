@@ -3,7 +3,7 @@
       <div class="flex flex-col">
           <p>Impressum</p>
           <div>
-              <Link href="/about-us">Über uns</Link>
+              <Link href="/">Startseite</Link>
               <Link href="/login">Anmelden</Link>
               <Link href="/register">Registrieren</Link>
           </div>

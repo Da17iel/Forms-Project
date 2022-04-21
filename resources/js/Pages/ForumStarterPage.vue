@@ -1,5 +1,5 @@
 <template>
-    <Layout>
+    <Layout :Testing="PropTesting">
         <div>
             Das sind die Kategorien:
             <div v-for="category in categories" class="border rounded shadow p-4 m-4">
@@ -20,6 +20,11 @@ export default {
     props: {
         categories: Object,
     },
+    data() {
+        return {
+            PropTesting: "Hello",
+        }
+    }
 }
 </script>
 
