@@ -18,7 +18,7 @@
         <slot />
     </main>
     <div>
-        {{ currentLocation }}
+        {{ $page.props.currentLocation }}
     </div>
     <Footer />
 </template>
@@ -30,9 +30,6 @@ import { computed } from 'vue'
 import { usePage } from '@inertiajs/inertia-vue3'
 export default {
     name: 'Layout',
-    props: {
-        currentLocation: Array,
-    },
     components: {
         Link, Footer,
     },
