@@ -6,9 +6,8 @@
 
     <nav class="flex flex-row place-self-end">
         <div class="ForumNav w-1/2">
-            <Link href="/forum">Home</Link>
+            <Link href="/forum">Hy Home</Link>
             <p>></p>
-            {{ Testing }}
         </div>
         <div class="w-1/2 place-content-center">
             <Link v-if="LoggedInd">My Profile</Link>
@@ -18,17 +17,21 @@
     <main>
         <slot />
     </main>
-
+    <div>
+        {{ currentLocation }}
+    </div>
     <Footer />
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import Footer from '@/Components/Footer.vue';
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/inertia-vue3'
 export default {
     name: 'Layout',
     props: {
-        Testing,
+        currentLocation: Array,
     },
     components: {
         Link, Footer,

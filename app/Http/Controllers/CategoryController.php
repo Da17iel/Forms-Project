@@ -12,6 +12,9 @@ use Inertia\Inertia;
 class CategoryController extends Controller
 {
     public function ShowCategory(Category $category) {
+        Inertia::share('currentLocation', [
+            "Home", "Categories", $category->name
+        ]);
         return Inertia::render('ForumTableView', [
             'category' => $category,
             'posts' => $category->posts,

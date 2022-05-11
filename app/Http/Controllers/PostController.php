@@ -11,12 +11,15 @@ use Inertia\Inertia;
 class PostController extends Controller
 {
     public function SinglePost(Post $post) {
+        Inertia::share('currentLocation', [
+
+        ]);
         return Inertia::render('SinglePost', [
             'post' => $post,
             'comments' => $post->comments,
             'users' => User::all(),
             'author' => $post->author,
-            'category' => $post->category
+            'category' => $post->category,
         ]);
     }
     /**
