@@ -6,7 +6,7 @@
 
     <nav class="flex flex-row place-self-end">
         <div class="ForumNav" v-for="Item in $page.props.currentLocation">
-            <Link :href="Item">{{ Item }}</Link>
+            <Link :href="Item.url">{{ Item.displayName }}</Link>
             <p>></p>
         </div>
     </nav>

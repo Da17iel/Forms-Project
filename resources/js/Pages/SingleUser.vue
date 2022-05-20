@@ -6,6 +6,7 @@
                 <div class="p-8 flex flex-col items-center">
                     <img :src="user.ProfilePicture" class="w-32 h-auto rounded-lg">
                     <h1>{{ user.username }}</h1>
+                    <p class="mt-2">{{ user.status }}</p>
                 </div>
             </div>
 

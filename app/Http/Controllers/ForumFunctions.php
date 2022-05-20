@@ -11,7 +11,12 @@ class ForumFunctions extends Controller
     public function StarterPage()
     {
         Inertia::share('currentLocation', [
-            "Home",
+            [
+
+                'displayName' => "Home",
+                'url' => '/forum',
+
+            ],
         ]);
         return Inertia::render('ForumStarterPage', [
             'categories' => Category::all(),

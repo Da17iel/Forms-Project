@@ -1,11 +1,11 @@
 <template>
     <Layout>
         <div>
-            Das sind die Kategorien:
+
+            <h1 class="ml-4">Unsere Themen:</h1>
             <div v-for="category in categories" class="border rounded shadow p-4 m-4">
                 <p class="text-2xl"><Link :href="'/forum/category/' + category.slug">{{ category.name }}</Link></p>
                 <p>{{ category.description }}</p>
-                <p v-for="location in currentLocation">This is my Location: {{ location }} </p>
             </div>
         </div>
     </Layout>

@@ -13,7 +13,18 @@ class CategoryController extends Controller
 {
     public function ShowCategory(Category $category) {
         Inertia::share('currentLocation', [
-            "Home", "Categories", $category->name
+            [
+                'displayName' => "Home",
+                'url' => '/forum',
+            ],
+            [
+                'displayName' => "Kategorien",
+                'url' => '/forum',
+            ],
+            [
+                'displayName' => $category->name,
+                'url' => '/forum/category/' . $category->slug,
+            ]
         ]);
         return Inertia::render('ForumTableView', [
             'category' => $category,

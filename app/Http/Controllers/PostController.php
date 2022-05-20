@@ -11,8 +11,24 @@ use Inertia\Inertia;
 class PostController extends Controller
 {
     public function SinglePost(Post $post) {
+
         Inertia::share('currentLocation', [
-            "Home", "Posts", $post->title,
+            [
+                'displayName' => "Home",
+                'url' => '/forum',
+            ],
+            [
+                'displayName' => "Kategorien",
+                'url' => '/forum/',
+            ],
+            [
+                'displayName' => $post->category->name,
+                'url' => '/forum/category/' . $post->category->slug,
+            ],
+            [
+                'displayName' => $post->title,
+                'url' => '/forum/post/' . $post->slug,
+            ],
         ]);
         return Inertia::render('SinglePost', [
             'post' => $post,
