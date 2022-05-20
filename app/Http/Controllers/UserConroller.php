@@ -10,7 +10,7 @@ class UserConroller extends Controller
 {
     public function UserProfile(User $user) {
         Inertia::share('currentLocation', [
-            "Home", "User", $user->username
+            "Home", $user->username
         ]);
         return Inertia::render('SingleUser', [
             'user' => $user,

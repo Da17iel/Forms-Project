@@ -1336,8 +1336,10 @@ main {
   min-height: 80vh;
   padding-top: 1rem;
 }
-.ForumNav {
+.ForumNav:first-of-type {
   margin-left: 3rem;
+}
+.ForumNav {
   display: flex;
   flex-direction: row;
 }

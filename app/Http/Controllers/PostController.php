@@ -12,7 +12,7 @@ class PostController extends Controller
 {
     public function SinglePost(Post $post) {
         Inertia::share('currentLocation', [
-
+            "Home", "Posts", $post->title,
         ]);
         return Inertia::render('SinglePost', [
             'post' => $post,

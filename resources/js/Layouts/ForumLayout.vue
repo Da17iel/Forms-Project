@@ -5,29 +5,24 @@
     </header>
 
     <nav class="flex flex-row place-self-end">
-        <div class="ForumNav w-1/2">
-            <Link href="/forum">Hy Home</Link>
+        <div class="ForumNav" v-for="Item in $page.props.currentLocation">
+            <Link :href="Item">{{ Item }}</Link>
             <p>></p>
         </div>
-        <div class="w-1/2 place-content-center">
-            <Link v-if="LoggedInd">My Profile</Link>
-        </div>
     </nav>
+    <div class="ml-12 w-1/2 place-content-center">
+        <Link v-if="LoggedIn">My Profile</Link>
+    </div>
 
     <main>
         <slot />
     </main>
-    <div>
-        {{ $page.props.currentLocation }}
-    </div>
     <Footer />
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import Footer from '@/Components/Footer.vue';
-import { computed } from 'vue'
-import { usePage } from '@inertiajs/inertia-vue3'
 export default {
     name: 'Layout',
     components: {
@@ -35,7 +30,7 @@ export default {
     },
     data() {
         return {
-            "LoggedInd" : true,
+            "LoggedIn" : true,
         }
     },
 }

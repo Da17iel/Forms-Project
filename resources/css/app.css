@@ -18,9 +18,13 @@ main {
     @apply pt-4 ml-12 mr-12 min-h-[80vh];
 }
 
-.ForumNav {
-    @apply pt-2 ml-12 flex flex-row space-x-3;
+.ForumNav:first-of-type{
+    @apply ml-12;
 }
+.ForumNav {
+    @apply pt-2 flex flex-row space-x-3;
+}
+
 
 .ForumNav * {
     @apply p-2;
