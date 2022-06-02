@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Tables without Foreign Key
-        User::factory(10)->create();
+        User::factory(35)->create();
         $this->call(CategorySeeder::class);
         Category::factory(3)->create();
 
         // Tables with Foreign Key
-        Post::factory(30)->create();
-        Comment::factory(100)->create();
+        Post::factory(20)->create();
+        Comment::factory(200)->create();
     }
 }

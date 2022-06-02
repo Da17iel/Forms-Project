@@ -1,4 +1,6 @@
 <template>
+    <Head :title="user.username + '\'s Profile'" />
+
     <Layout>
 
         <div class="flex flex-row">
@@ -24,10 +26,11 @@
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
+import { Head } from '@inertiajs/inertia-vue3';
 export default {
     name: "SingleUser",
     components: {
-        Layout,
+        Layout, Head
     },
     props: {
         user: Object,

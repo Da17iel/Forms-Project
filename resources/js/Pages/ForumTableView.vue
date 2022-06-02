@@ -1,4 +1,6 @@
 <template>
+    <Head :title="category.name" />
+
     <Layout>
         <div class="w-full h-full">
             <table class="shadow">
@@ -37,12 +39,14 @@
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
+import { Head } from '@inertiajs/inertia-vue3';
 export default {
     name: "ForumTableView",
     components: {
-        Layout,
+        Layout, Head
     },
     props: {
+        category: Object,
         posts: Object,
         users: Object,
     },

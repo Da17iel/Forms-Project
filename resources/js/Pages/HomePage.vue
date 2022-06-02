@@ -1,4 +1,6 @@
 <template>
+    <Head title="Startseite" />
+
     <Layout>
         <div class="my-10 flex flex-col space-y-16 items-center">
 
@@ -28,7 +30,7 @@
                         auch eine kleine Herausforderung sein. Ebenfalls sollte ich lernen, wie man mit Tools wie
                         GitHub produktiv arbeitet.</p>
                 </div>
-                <div class="min-w-[300px] w-72 h-48 bg-gray-100"></div>
+                <div class="min-w-[300px] w-72 h-48 bg-gradient-to-r from-gray-300 to-gray-100"></div>
             </div>
 
 
@@ -56,11 +58,12 @@
 
 <script>
 import Layout from '@/Layouts/HomePageLayout.vue';
+import { Head } from '@inertiajs/inertia-vue3';
 
 export default {
     name: 'HomePage',
     components: {
-        Layout
+        Layout, Head
     },
 
 }

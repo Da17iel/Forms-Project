@@ -1,7 +1,9 @@
 <template>
     <header class="flex flex-col w-full bg-sky-400">
         <h1 class="text-center py-6">My Forum</h1>
-        <button class="absolute top-2 right-2 w-20 h-6 bg-gray-500 place-self-end">Search</button>
+        <div class="absolute top-2 right-2">
+            <Link href="/search" class="w-20 h-6 bg-gray-300">Suche</Link>
+        </div>
     </header>
 
     <nav class="flex flex-row place-self-end">

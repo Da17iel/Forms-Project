@@ -1,4 +1,6 @@
 <template>
+    <Head :title="post.title" />
+
     <Layout>
         <div class="p-4 border rounded bg-gray-50">
             <h1 class="text-4xl">{{ post.title }}</h1>
@@ -28,6 +30,7 @@
 </template>
 
 <script>
+import { Head } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/ForumLayout.vue';
 
 export default {
@@ -40,7 +43,7 @@ export default {
         category: Object,
     },
     components: {
-        Layout,
+        Layout, Head
     },
 }
 </script>

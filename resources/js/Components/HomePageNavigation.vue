@@ -1,5 +1,5 @@
 <template>
-    <nav class="p-2 flex justify-center content-center bg-gray-200">
+    <nav class="p-2 flex justify-center content-center bg-gradient-to-b from-gray-200 to-gray-100">
         <Link href="/" class="navItem">Home</Link>
         <Link href="/forum" class="navItem">Forum</Link>
         <Link href="/login" class="navItem">Anmelden</Link>
