@@ -22860,7 +22860,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ntable[data-v-8f266f4a] {\n        font-family: arial, sans-serif;\n        border-collapse: collapse;\n        width: 100%;\n}\ntd[data-v-8f266f4a], th[data-v-8f266f4a] {\n        border: 1px solid #dddddd;\n        text-align: left;\n        padding: 8px;\n}\ntr[data-v-8f266f4a]:nth-child(even) {\n        background-color: #dddddd;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ntable[data-v-8f266f4a] {\r\n        font-family: arial, sans-serif;\r\n        border-collapse: collapse;\r\n        width: 100%;\n}\ntd[data-v-8f266f4a], th[data-v-8f266f4a] {\r\n        border: 1px solid #dddddd;\r\n        text-align: left;\r\n        padding: 8px;\n}\ntr[data-v-8f266f4a]:nth-child(even) {\r\n        background-color: #dddddd;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
