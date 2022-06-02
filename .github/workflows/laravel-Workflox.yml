@@ -33,6 +33,6 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
-    - name: Testing Github Actions
-      run: echo "This is on a linux Machine"
+    - name: Running migrations
+      run: php artisan migrate:fresh --seed
       
