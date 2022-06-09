@@ -7,18 +7,19 @@
     </header>
 
     <nav class="flex flex-row place-self-end">
-        <div class="ForumNav" v-for="Item in $page.props.currentLocation">
+        <div class="ForumNav" v-for="Item in $page.props.currentLocation" :key="Item.displayName">
             <Link :href="Item.url">{{ Item.displayName }}</Link>
             <p>></p>
         </div>
     </nav>
-    <div class="ml-12 w-1/2 place-content-center">
-        <Link v-if="LoggedIn">My Profile</Link>
+    <div v-if="$page.props.isLoggedIn" class="ml-12 w-1/2 place-content-center">
+        <Link :href="'/my-profile/'">My Profile</Link>
     </div>
 
     <main>
         <slot />
     </main>
+
     <Footer />
 </template>
 
@@ -26,14 +27,9 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import Footer from '@/Components/Footer.vue';
 export default {
-    name: 'Layout',
+    name: 'ForumLayout',
     components: {
         Link, Footer,
-    },
-    data() {
-        return {
-            "LoggedIn" : true,
-        }
     },
 }
 

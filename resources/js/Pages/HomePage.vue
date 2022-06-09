@@ -65,6 +65,5 @@ export default {
     components: {
         Layout, Head
     },
-
 }
 </script>

@@ -14,7 +14,7 @@ defineProps({
 });
 
 const form = useForm({
-    email: '',
+    username: '',
     password: '',
     remember: false
 });
@@ -27,7 +27,7 @@ const submit = () => {
 </script>
 
 <template>
-    <BreezeGuestLayout>
+    <Layout>
         <Head title="Log in" />
 
         <BreezeValidationErrors class="mb-4" />
@@ -38,8 +38,8 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <BreezeLabel for="email" value="Email" />
-                <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
+                <BreezeLabel for="username" value="Username" />
+                <BreezeInput id="username" type="text" class="mt-1 block w-full" v-model="form.username" required autofocus autocomplete="username" />
             </div>
 
             <div class="mt-4">
@@ -64,5 +64,5 @@ const submit = () => {
                 </BreezeButton>
             </div>
         </form>
-    </BreezeGuestLayout>
+    </Layout>
 </template>
