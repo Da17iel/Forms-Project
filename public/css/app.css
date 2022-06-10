@@ -625,6 +625,12 @@ select {
 .right-2 {
   right: 0.5rem;
 }
+.left-16 {
+  left: 4rem;
+}
+.top-4 {
+  top: 1rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -783,9 +789,6 @@ select {
 .w-20 {
   width: 5rem;
 }
-.w-1\/2 {
-  width: 50%;
-}
 .w-32 {
   width: 8rem;
 }
@@ -809,6 +812,9 @@ select {
 }
 .max-w-7xl {
   max-width: 80rem;
+}
+.max-w-2xl {
+  max-width: 42rem;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -861,9 +867,6 @@ select {
 }
 .flex-col {
   flex-direction: column;
-}
-.place-content-center {
-  place-content: center;
 }
 .content-center {
   align-content: center;

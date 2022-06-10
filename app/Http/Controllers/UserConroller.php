@@ -31,6 +31,16 @@ class UserConroller extends Controller
     }
 
     public function MyProfile() {
+        Inertia::share('currentLocation', [
+            [
+                'displayName' => "Home",
+                'url' => '/forum',
+            ],
+            [
+                'displayName' => "Mein Profil",
+                'url' => '',
+            ],
+        ]);
         return Inertia::render('MyProfile');
     }
 }

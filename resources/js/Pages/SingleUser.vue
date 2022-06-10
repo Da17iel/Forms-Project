@@ -6,7 +6,7 @@
         <div class="flex flex-row">
             <div class="UserProfile w-1/6 mr-12 border rounded">
                 <div class="p-8 flex flex-col items-center">
-                    <img :src="user.ProfilePicture" class="w-32 h-auto rounded-lg">
+                    <img :src="'/SampleProfilePictures/' + user.ProfilePicture" class="w-32 h-auto rounded-lg">
                     <h1>{{ user.username }}</h1>
                     <p class="mt-2">{{ user.status }}</p>
                 </div>

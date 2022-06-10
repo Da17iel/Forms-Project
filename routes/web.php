@@ -40,7 +40,7 @@ Route::get('/my-profile', [UserConroller::class, 'MyProfile'])
 ->middleware('auth');
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('HomePage');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/search', [ForumFunctions::class, 'SearchPage']);

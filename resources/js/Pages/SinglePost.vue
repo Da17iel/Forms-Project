@@ -13,7 +13,7 @@
 
         <div v-for="comment in comments" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
-                <img :src="users[(comment.user_id - 1)].ProfilePicture"
+                <img :src="'/SampleProfilePictures/' + users[(comment.user_id - 1)].ProfilePicture"
                      alt="Profile Picture" class="rounded h-12">
                 <p class="ml-4 self-center">
                     <Link :href="'/forum/user/' + users[(comment.user_id - 1)].username" class="text-black">

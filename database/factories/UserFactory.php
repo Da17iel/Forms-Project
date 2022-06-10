@@ -17,9 +17,9 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        $ProfilePicArray = array('\SampleProfilePictures\ProfilePicture1.png',
-            '\SampleProfilePictures\ProfilePicture2.png', '\SampleProfilePictures\ProfilePicture3.png',
-            '\SampleProfilePictures\ProfilePicture4.png');
+        $ProfilePicArray = array('ProfilePicture1.png',
+            'ProfilePicture2.png', 'ProfilePicture3.png',
+            'ProfilePicture4.png');
         $ProfilePicIndex = array_rand($ProfilePicArray);
 
         return [

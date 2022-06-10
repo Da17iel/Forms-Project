@@ -7,13 +7,30 @@
     </header>
 
     <nav class="flex flex-row place-self-end">
-        <div class="ForumNav" v-for="Item in $page.props.currentLocation" :key="Item.displayName">
+        <div class="ForumNav" v-for="Item in props.currentLocation" :key="Item.displayName">
             <Link :href="Item.url">{{ Item.displayName }}</Link>
             <p>></p>
         </div>
     </nav>
-    <div v-if="$page.props.isLoggedIn" class="ml-12 w-1/2 place-content-center">
-        <Link :href="'/my-profile/'">My Profile</Link>
+
+    <div class="absolute left-16 top-4 p-2 rounded bg-white w-">
+
+        <Link v-if="props.isLoggedIn" href="/my-profile">
+            <div class="flex flex-row">
+                <img
+                    :src="'/SampleProfilePictures/' + props.auth.user.ProfilePicture"
+                    alt="Nothing really"
+                    class="h-8 max-w-2xl"
+                >
+                <div class="ml-2">
+                    Mein Profil
+                </div>
+            </div>
+        </Link>
+        <Link v-else href="/login">
+            Login
+        </Link>
+
     </div>
 
     <main>
@@ -31,6 +48,11 @@ export default {
     components: {
         Link, Footer,
     },
+    computed: {
+        props() {
+            return this.$page.props;
+        }
+    }
 }
 
 </script>

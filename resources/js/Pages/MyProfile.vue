@@ -3,6 +3,7 @@
 
     <Layout>
         <h1>This is my Profile</h1>
+        <Link :href="route('logout')" method="post">Logout</Link>
     </Layout>
 </template>
 
