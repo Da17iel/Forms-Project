@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
+        <link rel="icon" href="{{ asset('favicon.png') }}">
 
         <!-- Scripts -->
         @routes
