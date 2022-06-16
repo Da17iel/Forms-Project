@@ -51,6 +51,17 @@
                 </div>
             </div>
 
+            <div class="text-center">
+                <h1>Viele Möglichkeiten</h1>
+                <p class="mt-4 mb-6">Weiter unten sehen Sie Fragen welche auf unserer Website gestellt wurden.</p>
+                <vue-writer
+                    :array="TyperQuestions"
+                    :typeSpeed="40"
+                    :eraseSpeed="40"
+                    :delay="2000"
+                />
+            </div>
+
         </div>
 
     </Layout>
@@ -63,7 +74,50 @@ import { Head } from '@inertiajs/inertia-vue3';
 export default {
     name: 'HomePage',
     components: {
-        Layout, Head
+        Layout, Head,
     },
+    props: {
+        questions: Array,
+        testing: Array,
+    },
+    computed: {
+        TyperQuestions() {
+            return this.questions.map(item => item.title);
+        }
+    }
 }
 </script>
+
+<style>
+    .is-typed span.cursor {
+        display: inline-block;
+        width: 1px;
+        background-color: black;
+        animation: blink 1s infinite;
+    }
+
+    .is-typed span.underscore {
+        display: inline-flex;
+        width: 10px;
+        height: 1px;
+        align-items:flex-end;
+        background-color: black;
+        animation: blink 1s infinite;
+    }
+
+    .is-typed span.cursor.typing {
+        animation: none;
+    }
+
+    @keyframes blink {
+        49% {
+            background-color: black;
+        }
+        50% {
+            background-color: transparent;
+        }
+        99% {
+            background-color: transparent;
+        }
+    }
+</style>
