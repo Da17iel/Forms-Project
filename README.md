@@ -26,5 +26,3 @@ Now you can start to configure the Project
 </ul>
 
 After that is done you should be able to start up your Webserver and let it run.
-    
-     
