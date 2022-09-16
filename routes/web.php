@@ -41,6 +41,8 @@ Route::get('/forum/category/{category:slug}', [CategoryController::class, 'ShowC
 Route::get('/my-profile', [UserConroller::class, 'MyProfile'])
 ->middleware('auth');
 
+Route::post('/my-profile', [UserConroller::class, 'UpdateProfile']);
+
 Route::get('/dashboard', function () {
     return Inertia::render('HomePage');
 })->middleware(['auth', 'verified'])->name('dashboard');
