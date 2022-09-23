@@ -15,14 +15,13 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string("IconPath");
+            $table->string("IconPath")->default('/SampleIcons/SamplePicture1.ico');
             $table->foreignId('user_id')->nullable()->constrained();
             $table->string("title")->unique();
             $table->string("slug")->unique();
-            $table->string("description");
             $table->longText("content");
-            $table->integer('replies');
-            $table->integer("views");
+            $table->integer('replies')->default(0);
+            $table->integer("views")->default(0);
             $table->foreignId('category_id')->constrained();
             $table->date("creationDate");
             $table->timestamps();

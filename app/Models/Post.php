@@ -22,10 +22,13 @@ class Post extends Model
     }
 
     protected $fillable = [
-        'title',
-        'description',
         'user_id',
-        'content',
+        'title',
         'slug',
+        'content',
+        'replies',
+        'views',
+        'category_id',
+        'creationDate',
     ];
 }

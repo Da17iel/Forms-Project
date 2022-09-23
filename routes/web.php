@@ -34,11 +34,16 @@ Route::get('/forum', [ForumFunctions::class, 'StarterPage']);
 
 Route::get('/forum/post/{post:slug}', [PostController::class, 'SinglePost']);
 
+Route::get('/forum/create-post', [PostController::class, 'ShowCreatePost'])
+->middleware('auth');
+
+Route::post('/forum/create-post', [PostController::class, 'create']);
+
 Route::get('/forum/user/{user:username}', [UserConroller::class, 'UserProfile']);
 
 Route::get('/forum/category/{category:slug}', [CategoryController::class, 'ShowCategory']);
 
-Route::get('/my-profile', [UserConroller::class, 'MyProfile'])
+Route::get('/forum/my-profile', [UserConroller::class, 'MyProfile'])
 ->middleware('auth');
 
 Route::post('/my-profile', [UserConroller::class, 'UpdateProfile']);

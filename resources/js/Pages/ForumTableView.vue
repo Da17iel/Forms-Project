@@ -2,7 +2,11 @@
     <Head :title="category.name" />
 
     <Layout>
-        <div class="w-full h-full">
+        <div class="flex flex-col w-full h-full">
+            <Link
+                class="p-2 border rounded-lg border-gray-400 hover:border-gray-900 self-end"
+                href="/forum/create-post"
+            >Post erstellen</Link>
             <table class="shadow">
                 <tr>
                     <th class="w-32">Zustand</th>

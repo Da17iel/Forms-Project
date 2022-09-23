@@ -13,13 +13,13 @@
         </div>
     </nav>
 
-    <div class="absolute left-16 top-4 p-2 rounded bg-white w-">
+    <div class="absolute left-16 top-4 p-2 rounded bg-white w-40">
 
         <Link v-if="props.isLoggedIn" href="/my-profile">
             <div class="flex flex-row">
                 <img
                     :src="'/SampleProfilePictures/' + props.auth.user.ProfilePicture"
-                    alt="Nothing really"
+                    :alt="props.auth.user.ProfilePicture + 's Profile Picture'"
                     class="h-8 max-w-2xl"
                 >
                 <div class="ml-2">
@@ -30,7 +30,6 @@
         <Link v-else href="/login">
             Login
         </Link>
-
     </div>
 
     <main>
