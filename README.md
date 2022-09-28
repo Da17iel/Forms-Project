@@ -2,7 +2,16 @@
 ## Goals
 My main goal with this project is to gain experience with the frameworks I used. The goal with this website is to create a forum that anyone can use. The User should be able to log into the website and Post/View a question. 
 ## Frameworks
-This Project contains frameworks like [Laravel](https://laravel.com/docs/9.x), [Laravel Brezze](https://laravel.com/docs/9.x/starter-kits#breeze-and-inertia), [InertiaJs](https://inertiajs.com/), [VueJs](https://vuejs.org/), [Tailwindcss](https://tailwindcss.com/). 
+Following Frameworks were used to create this Project:
+
+<ul>
+    <li> [Laravel](https://laravel.com/docs/9.x)</li>
+    <li>[Laravel Brezze](https://laravel.com/docs/9.x/starter-kits#breeze-and-inertia)</li>
+    <li>[InertiaJs](https://inertiajs.com/)</li>
+    <li>[VueJs](https://vuejs.org/)</li>
+    <li>[Tailwindcss](https://tailwindcss.com/)</li>
+</ul>
+
 ## Installation on a Server
 Here are the requirements for the webserver:
 <ul>
