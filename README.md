@@ -4,34 +4,28 @@ My main goal with this project is to gain experience with the frameworks I used.
 ## Frameworks
 Following Frameworks were used to create this Project:
 
-<ul>
-    <li> [Laravel](https://laravel.com/docs/9.x)</li>
-    <li>[Laravel Brezze](https://laravel.com/docs/9.x/starter-kits#breeze-and-inertia)</li>
-    <li>[InertiaJs](https://inertiajs.com/)</li>
-    <li>[VueJs](https://vuejs.org/)</li>
-    <li>[Tailwindcss](https://tailwindcss.com/)</li>
-</ul>
+- [Laravel](https://laravel.com/docs/9.x)
+- [Laravel Brezze](https://laravel.com/docs/9.x/starter-kits#breeze-and-inertia)</li>
+- [InertiaJs](https://inertiajs.com/)</li>
+- [VueJs](https://vuejs.org/)</li>
+- [Tailwindcss](https://tailwindcss.com/)
 
 ## Installation on a Server
 Here are the requirements for the webserver:
-<ul>
-    <li>A Database must be available</li>
-    <li>Php and NodeJs must be installed on the System</li>
-    <li>Php File Extensions must be enabled (Uncomment in php.ini extension=fileinfo)</li>
-    <li>The MySQL Driver should be enables if you have a MySQL DataBase (Uncomment in php.ini extension=pdo_mysql)</li>
-    <li>Rename the .env.example to .env</li>
-    
-</ul>
+- A Database must be available
+- Php and NodeJs must be installed on the System
+- Php File Extensions must be enabled (Uncomment in php.ini extension=fileinfo)
+- The MySQL Driver should be enables if you have a MySQL DataBase (Uncomment in php.ini extension=pdo_mysql)
+- Rename the .env.example to .env
+
 
 Now you can start to configure the Project
-<ul>
-    <li>Fill out your Information on the .env file. Including Database</li>
-    <li>Open a cmd and go to the Project Location</li>
-    <li>Run the Command <code>npm install</code></li>
-    <li>Run the Command <code>composer install</code></li>
-    <li>Run <code>php artisan key:generate</code></li>
-    <li>Run the Command <code>php artisan migrate:fresh</code>. This will create all the tables on you DB</li>
-    <li>Then run <code>php artisan serve</code> to start the Webserver</li>
-</ul>
+- Fill out your Information on the .env file. Including Database
+- Open a cmd and go to the Project Location
+- Run the Command <code>npm install</code>
+- Run the Command <code>composer install</code>
+- Run <code>php artisan key:generate</code>
+- Run the Command <code>php artisan migrate:fresh</code>. This will create all the tables on you DB
+- Then run <code>php artisan serve</code> to start the Webserver
 
 After that is done you should be able to start up your Webserver and let it run.
