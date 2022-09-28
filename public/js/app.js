@@ -22915,7 +22915,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onSubmit: _cache[5] || (_cache[5] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
           return $options.submit && $options.submit.apply($options, arguments);
         }, ["prevent"]))
-      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("<div>\n                            <BreezeLabel for=\"ProfilePicture\" value=\"Profile Picture\" />\n                            <BreezeInput id=\"ProfilePicture\" type=\"file\" class=\"mt-1 block w-full\" />\n                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeLabel"], {
+      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("<div>\r\n                            <BreezeLabel for=\"ProfilePicture\" value=\"Profile Picture\" />\r\n                            <BreezeInput id=\"ProfilePicture\" type=\"file\" class=\"mt-1 block w-full\" />\r\n                        </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeLabel"], {
         "for": "username",
         value: "Username"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
@@ -23489,7 +23489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#Errors p, #Errors li {\n    color: red;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#Errors p, #Errors li {\r\n    color: red;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23513,7 +23513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ntable[data-v-8f266f4a] {\n        font-family: arial, sans-serif;\n        border-collapse: collapse;\n        width: 100%;\n}\ntd[data-v-8f266f4a], th[data-v-8f266f4a] {\n        border: 1px solid #dddddd;\n        text-align: left;\n        padding: 8px;\n}\ntr[data-v-8f266f4a]:nth-child(even) {\n        background-color: #dddddd;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ntable[data-v-8f266f4a] {\r\n        font-family: arial, sans-serif;\r\n        border-collapse: collapse;\r\n        width: 100%;\n}\ntd[data-v-8f266f4a], th[data-v-8f266f4a] {\r\n        border: 1px solid #dddddd;\r\n        text-align: left;\r\n        padding: 8px;\n}\ntr[data-v-8f266f4a]:nth-child(even) {\r\n        background-color: #dddddd;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23537,7 +23537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.is-typed span.cursor {\n        display: inline-block;\n        width: 1px;\n        background-color: black;\n        -webkit-animation: blink 1s infinite;\n                animation: blink 1s infinite;\n}\n.is-typed span.underscore {\n        display: inline-flex;\n        width: 10px;\n        height: 1px;\n        align-items:flex-end;\n        background-color: black;\n        -webkit-animation: blink 1s infinite;\n                animation: blink 1s infinite;\n}\n.is-typed span.cursor.typing {\n        -webkit-animation: none;\n                animation: none;\n}\n@-webkit-keyframes blink {\n49% {\n            background-color: black;\n}\n50% {\n            background-color: transparent;\n}\n99% {\n            background-color: transparent;\n}\n}\n@keyframes blink {\n49% {\n            background-color: black;\n}\n50% {\n            background-color: transparent;\n}\n99% {\n            background-color: transparent;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.is-typed span.cursor {\r\n        display: inline-block;\r\n        width: 1px;\r\n        background-color: black;\r\n        -webkit-animation: blink 1s infinite;\r\n                animation: blink 1s infinite;\n}\n.is-typed span.underscore {\r\n        display: inline-flex;\r\n        width: 10px;\r\n        height: 1px;\r\n        align-items:flex-end;\r\n        background-color: black;\r\n        -webkit-animation: blink 1s infinite;\r\n                animation: blink 1s infinite;\n}\n.is-typed span.cursor.typing {\r\n        -webkit-animation: none;\r\n                animation: none;\n}\n@-webkit-keyframes blink {\n49% {\r\n            background-color: black;\n}\n50% {\r\n            background-color: transparent;\n}\n99% {\r\n            background-color: transparent;\n}\n}\n@keyframes blink {\n49% {\r\n            background-color: black;\n}\n50% {\r\n            background-color: transparent;\n}\n99% {\r\n            background-color: transparent;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23561,7 +23561,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#Errors p, #Errors li {\n    color: red;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#Errors p, #Errors li {\r\n    color: red;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
