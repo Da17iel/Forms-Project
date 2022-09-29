@@ -56,7 +56,6 @@ class PostController extends Controller
             ],
         ]);
         return Inertia::render('CreatePost', [
-            'loggedIn' => Auth::check(),
             'categories' => Category::all(),
         ]);
     }
@@ -92,7 +91,9 @@ class PostController extends Controller
             'category' => 'required|string|exists:categories,name|max:255',
         ]);
 
+        // Define the Variables for clean creation of Post
         $slug = Str::slug($request['title']);
+        $categoryID = (int)Category::all()->where('name', $request['category'])->first()['id'];
 
         // Create a new Post
         Post::create([
@@ -100,7 +101,7 @@ class PostController extends Controller
             'title' => $request['title'],
             'slug' => $slug,
             'content' => $request['content'],
-            'category_id' => (int)Category::all()->where('name', $request['category'])->first()['id'],
+            'category_id' => $categoryID,
             'creationDate' => date("Y.m.d"),
         ]);
 

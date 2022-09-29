@@ -2,38 +2,41 @@
     <Head title="Create a Post" />
 
     <Layout>
-        <div class="bg-gray-300">
+        <div class="bg-gray-200">
 
             <div class="p-8">
                 <h1>Create a post</h1>
                 <hr>
 
-                <form method="post" @submit.prevent="submit">
+                <form method="post" @submit.prevent="submit" class="mt-6">
 
                     <div>
                         <BreezeValidationErrors />
                     </div>
 
-                    <div>
-                        <BreezeLabel for="title" value="Titel: "/>
-                        <BreezeInput id="title" type="text" v-model="form.title"/>
+                    <div class="w-4/6">
+                        <div>
+                            <BreezeLabel for="title" value="Titel: "/>
+                            <BreezeInput id="title" type="text" v-model="form.title" class="w-full"/>
+                        </div>
+
+                        <div>
+                            <BreezeLabel for="category" value="Kategorie: " class="mt-4"/>
+                            <select name="category" id="category" v-model="form.category" class="border-0 rounded w-full">
+                                <option v-for="category in categories" :key="category.id" :value="category.name">{{ category.name }}</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <BreezeLabel for="content" value="Inhalt: " class="mt-4"/>
+                            <textarea id="content" type="textarea" v-model="form.content" rows="9" class="border-0 rounded w-full"/>
+                        </div>
+
+                        <div>
+                            <BreezeButton class="mt-4">Submit</BreezeButton>
+                        </div>
                     </div>
 
-                    <div>
-                        <BreezeLabel for="category" value="Kategorie: "/>
-                        <select name="category" id="category" v-model="form.category">
-                            <option v-for="category in categories" :key="category.id" :value="category.name">{{ category.name }}</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <BreezeLabel for="content" value="Inhalt: "/>
-                        <BreezeInput id="content" type="text" v-model="form.content"/>
-                    </div>
-
-                    <div>
-                        <BreezeButton>Submit</BreezeButton>
-                    </div>
 
                 </form>
             </div>
@@ -66,7 +69,6 @@ export default {
     },
 
     props: {
-        loggedIn: Boolean,
         categories: Object,
     },
     components: {
@@ -75,11 +77,7 @@ export default {
     methods: {
         // Submit form data to Database
         submit() {
-            if (this.loggedIn) {
-                this.form.post("/create-post")
-            } else {
-                // Display the Error
-            }
+            this.form.post("/forum/create-post")
         },
     }
 }
