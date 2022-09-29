@@ -32,6 +32,7 @@ Route::get('/', function () {
 
 Route::get('/forum', [ForumFunctions::class, 'StarterPage']);
 
+// Post Routes
 Route::get('/forum/post/{post:slug}', [PostController::class, 'SinglePost']);
 
 Route::get('/forum/create-post', [PostController::class, 'ShowCreatePost'])
@@ -39,23 +40,17 @@ Route::get('/forum/create-post', [PostController::class, 'ShowCreatePost'])
 
 Route::post('/forum/create-post', [PostController::class, 'create']);
 
-Route::get('/forum/user/{user:username}', [UserConroller::class, 'UserProfile']);
-
 Route::get('/forum/category/{category:slug}', [CategoryController::class, 'ShowCategory']);
+
+// User Routes
+Route::get('/forum/user/{user:username}', [UserConroller::class, 'UserProfile']);
 
 Route::get('/forum/my-profile', [UserConroller::class, 'MyProfile'])
 ->middleware('auth');
 
-Route::post('/my-profile', [UserConroller::class, 'UpdateProfile']);
+Route::post('/forum/my-profile', [UserConroller::class, 'UpdateProfile']);
 
-Route::get('/dashboard', function () {
-    return Inertia::render('HomePage');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/search', [ForumFunctions::class, 'SearchPage']);
-
-Route::get('/thisisiatest', function () {
-    return Inertia::render('Testing');
-})->middleware('daniel-testing');
+// Other Routes
+Route::get('/forum/search', [ForumFunctions::class, 'SearchPage']);
 
 require __DIR__.'/auth.php';

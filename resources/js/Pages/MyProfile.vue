@@ -122,7 +122,7 @@ export default {
     methods: {
         // Submit form data to Database
         submit() {
-            this.form.post("/my-profile")
+            this.form.post("/forum/my-profile")
             if (!this.form.hasErrors) {
                 this.ShowProfileEdit = false;
             }

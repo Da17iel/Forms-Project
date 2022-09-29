@@ -2,7 +2,7 @@
     <header class="flex flex-col w-full bg-sky-400">
         <h1 class="text-center py-6">My Forum</h1>
         <div class="absolute top-2 right-2">
-            <Link href="/search" class="w-20 h-6 bg-gray-300">Suche</Link>
+            <Link href="/forum/search" class="w-20 h-6 bg-gray-300">Suche</Link>
         </div>
     </header>
 
@@ -14,8 +14,7 @@
     </nav>
 
     <div class="absolute left-16 top-4 p-2 rounded bg-white w-40">
-
-        <Link v-if="props.isLoggedIn" href="/my-profile">
+        <Link v-if="props.isLoggedIn" href="/forum/my-profile">
             <div class="flex flex-row">
                 <img
                     :src="'/SampleProfilePictures/' + props.auth.user.ProfilePicture"

@@ -82,9 +82,3 @@ export default {
     }
 }
 </script>
-
-<style>
-#Errors p, #Errors li {
-    color: red;
-}
-</style>
