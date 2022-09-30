@@ -24,7 +24,7 @@ class PostController extends Controller
             ],
             [
                 'displayName' => "Kategorien",
-                'url' => '/forum/',
+                'url' => '/forum',
             ],
             [
                 'displayName' => $post->category->name,
@@ -41,6 +41,7 @@ class PostController extends Controller
             'users' => User::all(),
             'author' => $post->author,
             'category' => $post->category,
+            'loggedIn' => Auth::check(),
         ]);
     }
 

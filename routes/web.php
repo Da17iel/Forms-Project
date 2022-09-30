@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserConroller;
 use App\Models\Post;
@@ -34,6 +35,8 @@ Route::get('/forum', [ForumFunctions::class, 'StarterPage']);
 
 // Post Routes
 Route::get('/forum/post/{post:slug}', [PostController::class, 'SinglePost']);
+
+Route::post('/forum/post/{post:slug}', [CommentController::class, 'create']);
 
 Route::get('/forum/create-post', [PostController::class, 'ShowCreatePost'])
 ->middleware('auth');

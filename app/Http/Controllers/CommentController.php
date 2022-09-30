@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
@@ -18,14 +20,18 @@ class CommentController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $request->validate([
+            'content' => 'required',
+        ]);
+        Comment::create([
+            'user_id' => Auth::id(),
+            'post_id' => !empty($request['post_id']) ? $request['post_id'] : NULL,
+            'comment_id' => !empty($request['comment_id']) ? $request['comment_id'] : NULL,
+            'content' => $request['content'],
+        ]);
+        return back();
     }
 
     /**

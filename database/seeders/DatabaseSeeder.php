@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
 
         // Tables with Foreign Key
         Post::factory(20)->create();
-        Comment::factory(200)->create();
+        Comment::factory(20)->create();
     }
 }

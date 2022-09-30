@@ -11,7 +11,15 @@
 
         <p class="text-2xl pt-10 pb-4">Antworten:</p>
 
-        <div v-for="comment in comments" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
+        <div v-if="loggedIn">
+            <p>Write a comment: </p>
+            <form method="post" @submit.prevent="submit" class="w-full">
+                <BreezeInput id="comment" type="text" v-model="form.content" class="w-auto" />
+                <BreezeButton>Comment</BreezeButton>
+            </form>
+        </div>
+
+        <div v-for="comment in comments" :key="comment.id" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
                 <img :src="'/SampleProfilePictures/' + users[(comment.user_id - 1)].ProfilePicture"
                      alt="Profile Picture" class="rounded h-12">
@@ -29,22 +37,42 @@
     </Layout>
 </template>
 
+<script setup>
+import BreezeButton from '@/Components/Button.vue';
+import BreezeInput from '@/Components/Input.vue';
+</script>
+
 <script>
-import { Head } from '@inertiajs/inertia-vue3';
+import { Head, useForm } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/ForumLayout.vue';
 
 export default {
     name: "SinglePost",
+    data() {
+        return {
+            form: useForm({
+                    post_id: this.post.id,
+                    content: '',
+                }
+            )
+        }
+    },
     props: {
         post: Object,
         comments: Object,
         users: Object,
         author: Object,
         category: Object,
+        loggedIn: Object,
     },
     components: {
         Layout, Head
     },
+    methods: {
+        submit() {
+            this.form.post(this.$page.url);
+        }
+    }
 }
 </script>
 
