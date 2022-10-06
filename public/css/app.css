@@ -631,6 +631,9 @@ select {
 .top-4 {
   top: 1rem;
 }
+.right-16 {
+  right: 4rem;
+}
 .z-0 {
   z-index: 0;
 }
@@ -723,6 +726,9 @@ select {
 }
 .inline-block {
   display: inline-block;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: flex;
@@ -819,6 +825,15 @@ select {
 }
 .w-1\/4 {
   width: 25%;
+}
+.w-24 {
+  width: 6rem;
+}
+.w-12 {
+  width: 3rem;
+}
+.w-16 {
+  width: 4rem;
 }
 .min-w-\[300px\] {
   min-width: 300px;
@@ -930,6 +945,9 @@ select {
 }
 .self-center {
   align-self: center;
+}
+.justify-self-center {
+  justify-self: center;
 }
 .overflow-hidden {
   overflow: hidden;

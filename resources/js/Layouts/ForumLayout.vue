@@ -1,8 +1,14 @@
 <template>
-    <header class="flex flex-col w-full" style="background-color: #161616;">
-        <h1 class="text-center py-6 text-white">My Forum</h1>
-        <div class="absolute top-2 right-2">
-            <Link href="/forum/search" class="w-20 h-6 bg-gray-300">Suche</Link>
+    <header class="flex w-full" style="background-color: #161616;">
+        <div class="w-full flex flex-row items-center justify-center">
+            <Link href="/forum" class="flex flex-row items-center">
+                <img src="/favicon.png" alt="Website Logo" class="h-16 w-16">
+                <h1 class="py-6 px-4 text-white">My Forum</h1>
+            </Link>
+        </div>
+        <div class="absolute top-4 right-16">
+            <Link href="/forum/search" class="p-2 rounded bg-gray-900 border-2 border-blue-700 transition ease-in-out duration-700
+              hover:border-blue-500 hover:text-blue-200 rounded w-full inline-block w-48">Suche</Link>
         </div>
     </header>
 
