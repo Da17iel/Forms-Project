@@ -17,8 +17,12 @@
 
                 <tr v-for="post in posts" :key="post.id">
                     <!-- Status -->
-                    <td><img :src="post.IconPath"
-                             alt="Icon" class="w-20 h-20"></td>
+                    <td class="">
+                        <div class="w-full flex justify-center">
+                            <img :src="post.IconPath"
+                                 alt="Icon" class="w-20 h-20">
+                        </div>
+                    </td>
 
                     <!-- Title -->
                     <td>

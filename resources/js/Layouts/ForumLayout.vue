@@ -1,20 +1,26 @@
 <template>
-    <header class="flex flex-col w-full bg-sky-400">
-        <h1 class="text-center py-6">My Forum</h1>
+    <header class="flex flex-col w-full" style="background-color: #161616;">
+        <h1 class="text-center py-6 text-white">My Forum</h1>
         <div class="absolute top-2 right-2">
             <Link href="/forum/search" class="w-20 h-6 bg-gray-300">Suche</Link>
         </div>
     </header>
 
-    <nav class="flex flex-row place-self-end">
-        <div class="ForumNav" v-for="Item in props.currentLocation" :key="Item.displayName">
-            <Link :href="Item.url">{{ Item.displayName }}</Link>
-            <p>></p>
+    <nav>
+        <div class="ForumNav">
+            <div v-for="Item in props.currentLocation" :key="Item.displayName" class="NavItem">
+                <Link :href="Item.url">
+                    {{ Item.displayName }}
+                    <p class="mr-4 ml-2">></p>
+                </Link>
+            </div>
         </div>
     </nav>
 
-    <div class="absolute left-16 top-4 p-2 rounded bg-white w-40">
-        <Link v-if="props.isLoggedIn" href="/forum/my-profile">
+    <div class="absolute left-16 top-4 w-40">
+        <Link v-if="props.isLoggedIn" href="/forum/my-profile"
+              class="p-2 rounded bg-gray-900 border-2 border-blue-700 transition ease-in-out duration-700
+              hover:border-blue-500 hover:text-blue-200 rounded w-full inline-block">
             <div class="flex flex-row">
                 <img
                     :src="'/SampleProfilePictures/' + props.auth.user.ProfilePicture"
@@ -26,9 +32,9 @@
                 </div>
             </div>
         </Link>
-        <Link v-else href="/login">
-            Login
-        </Link>
+        <Link v-else href="/login"
+              class="p-2 rounded bg-gray-900 border-2 border-blue-700 transition ease-in-out duration-700
+               hover:border-blue-500 hover:text-blue-200 rounded w-full inline-block">Login</Link>
     </div>
 
     <main>

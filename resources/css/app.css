@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+    color: #161616;
+}
+
 nav .navItem {
     @apply px-4 hover:text-sky-400 ease-out duration-200;
 }
@@ -11,27 +15,33 @@ h1 {
 }
 
 a {
-    @apply text-lime-500 hover:text-lime-700 active:text-red-500;
+    color: #1098F7;
+    @apply active:text-red-500;
+}
+
+a:hover {
+    color: #4A8FE7;
 }
 
 main {
     @apply pt-4 ml-12 mr-12 min-h-[80vh];
 }
 
-.ForumNav:first-of-type{
-    @apply ml-12;
-}
 .ForumNav {
-    @apply pt-2 flex flex-row space-x-3;
+    @apply pl-16 py-2 flex flex-row bg-gray-900;
 }
-
 
 .ForumNav * {
-    @apply p-2;
+    display: inline;
+    @apply text-white hover:text-gray-200;
 }
 
-.ForumNav a {
-    @apply border-2;
+.ForumNav .NavItem {
+    @apply pl-2 transition duration-100 ease-in-out hover:bg-gray-500 rounded-sm;
+}
+
+.NavItem Link {
+    @apply text-blue-500;
 }
 
 footer div p {
