@@ -14,7 +14,7 @@
         <div v-if="loggedIn">
             <p>Write a comment: </p>
             <form method="post" @submit.prevent="submit" class="w-full">
-                <BreezeInput id="comment" type="text" v-model="form.content" class="w-auto" />
+                <BreezeInput id="comment" type="text" v-model="CommentContent" class="w-auto" />
                 <BreezeButton>Comment</BreezeButton>
             </form>
         </div>
@@ -54,7 +54,8 @@ export default {
                     post_id: this.post.id,
                     content: '',
                 }
-            )
+            ),
+            CommentContent: '',
         }
     },
     props: {
@@ -70,6 +71,10 @@ export default {
     },
     methods: {
         submit() {
+            this.form.content = this.CommentContent;
+
+            // Needed to clear the Form
+            this.CommentContent = '';
             this.form.post(this.$page.url);
         }
     }

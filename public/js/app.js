@@ -20364,7 +20364,8 @@ var __default__ = {
       form: (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)({
         post_id: this.post.id,
         content: ''
-      })
+      }),
+      CommentContent: ''
     };
   },
   props: {
@@ -20381,6 +20382,9 @@ var __default__ = {
   },
   methods: {
     submit: function submit() {
+      this.form.content = this.CommentContent; // Needed to clear the Form
+
+      this.CommentContent = '';
       this.form.post(this.$page.url);
     }
   }
@@ -22442,9 +22446,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
         id: "comment",
         type: "text",
-        modelValue: $data.form.content,
+        modelValue: $data.CommentContent,
         "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-          return $data.form.content = $event;
+          return $data.CommentContent = $event;
         }),
         "class": "w-auto"
       }, null, 8
