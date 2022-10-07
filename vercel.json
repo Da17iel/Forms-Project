@@ -15,7 +15,7 @@
         }
     ],
     "env": {
-        "APP_NAME": "ForumProject",  
+        "APP_NAME": "ForumProject",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://forumproject-da17iel.vercel.app/",
