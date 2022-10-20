@@ -20361,20 +20361,27 @@ var __default__ = {
   name: "SinglePost",
   data: function data() {
     return {
+      CommentContent: '',
+      ReplyContent: '',
       form: (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)({
         post_id: this.post.id,
         content: ''
       }),
-      CommentContent: ''
+      reply: (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)({
+        comment_id: '',
+        content: ''
+      }),
+      showingComment: ''
     };
   },
   props: {
     post: Object,
     comments: Object,
+    replies: Object,
     users: Object,
     author: Object,
     category: Object,
-    loggedIn: Object
+    loggedIn: Boolean
   },
   components: {
     Layout: _Layouts_ForumLayout_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -20382,10 +20389,24 @@ var __default__ = {
   },
   methods: {
     submit: function submit() {
+      // Pass the data from the local var to the form var
       this.form.content = this.CommentContent; // Needed to clear the Form
 
       this.CommentContent = '';
       this.form.post(this.$page.url);
+    },
+    submitReply: function submitReply(CommentID) {
+      // Set
+      this.reply.comment_id = CommentID;
+      this.reply.content = this.ReplyContent; // Clear the form and hide the reply input
+
+      this.ReplyContent = '';
+      this.showingComment = '';
+      this.reply.post(this.$page.url);
+    },
+    showReply: function showReply(CommentID) {
+      // This var decides which Comment of a comment field is shown
+      this.showingComment = CommentID;
     }
   }
 };
@@ -22432,6 +22453,27 @@ var _hoisted_14 = {
 var _hoisted_15 = {
   "class": "text-lg"
 };
+var _hoisted_16 = {
+  key: 0
+};
+var _hoisted_17 = ["onClick"];
+var _hoisted_18 = ["onSubmit"];
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Reply");
+
+var _hoisted_20 = {
+  "class": "flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block"
+};
+var _hoisted_21 = ["src"];
+var _hoisted_22 = {
+  "class": "ml-4 self-center"
+};
+var _hoisted_23 = {
+  "class": "comment-body"
+};
+var _hoisted_24 = {
+  "class": "text-lg"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
@@ -22500,7 +22542,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
           key: comment.id,
           "class": "bg-gray-50 p-4 mt-4 rounded drop-shadow-md"
-        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Display of original comment "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
           src: '/SampleProfilePictures/' + $props.users[comment.user_id - 1].ProfilePicture,
           alt: "Profile Picture",
           "class": "rounded h-12"
@@ -22522,7 +22564,66 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* PROPS, DYNAMIC_SLOTS */
         , ["href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.content), 1
         /* TEXT */
-        )])]);
+        )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Form to reply to a comment "), $props.loggedIn ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+          onClick: function onClick($event) {
+            return $options.showReply(comment.id);
+          }
+        }, "Antworten", 8
+        /* PROPS */
+        , _hoisted_17), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.showingComment !== comment.id]]), $data.showingComment === comment.id ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
+          key: 0,
+          method: "post",
+          onSubmit: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
+            return $options.submitReply(comment.id);
+          }, ["prevent"])
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
+          id: "ReplyToComment",
+          type: "text",
+          modelValue: $data.ReplyContent,
+          "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+            return $data.ReplyContent = $event;
+          })
+        }, null, 8
+        /* PROPS */
+        , ["modelValue"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeButton"], null, {
+          "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+            return [_hoisted_19];
+          }),
+          _: 1
+          /* STABLE */
+
+        })], 40
+        /* PROPS, HYDRATE_EVENTS */
+        , _hoisted_18)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" For Loop for all replies a comment has "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.replies, function (reply) {
+          return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+            key: reply.id,
+            "class": "bg-gray-50 p-4 mt-4 rounded drop-shadow-md"
+          }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+            src: '/SampleProfilePictures/' + $props.users[reply.user_id - 1].ProfilePicture,
+            alt: "Profile Picture",
+            "class": "rounded h-12"
+          }, null, 8
+          /* PROPS */
+          , _hoisted_21), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+            href: '/forum/user/' + $props.users[reply.user_id - 1].username,
+            "class": "text-black"
+          }, {
+            "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.users[reply.user_id - 1].username), 1
+              /* TEXT */
+              )];
+            }),
+            _: 2
+            /* DYNAMIC */
+
+          }, 1032
+          /* PROPS, DYNAMIC_SLOTS */
+          , ["href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(reply.content), 1
+          /* TEXT */
+          )])]);
+        }), 128
+        /* KEYED_FRAGMENT */
+        ))]);
       }), 128
       /* KEYED_FRAGMENT */
       ))];
