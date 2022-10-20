@@ -1,5 +1,5 @@
 <template>
-    <Head :title="user.username + '\'s Profile'" />
+    <Head :title="user.username + '\'s Profile'"/>
 
     <Layout>
 
@@ -26,7 +26,8 @@
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
-import { Head } from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/inertia-vue3';
+
 export default {
     name: "SingleUser",
     components: {

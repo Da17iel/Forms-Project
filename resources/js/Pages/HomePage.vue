@@ -1,5 +1,5 @@
 <template>
-    <Head title="Startseite" />
+    <Head title="Startseite"/>
 
     <Layout>
         <div class="my-10 flex flex-col space-y-16 items-center">
@@ -69,7 +69,7 @@
 
 <script>
 import Layout from '@/Layouts/HomePageLayout.vue';
-import { Head } from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/inertia-vue3';
 
 export default {
     name: 'HomePage',
@@ -89,35 +89,35 @@ export default {
 </script>
 
 <style>
-    .is-typed span.cursor {
-        display: inline-block;
-        width: 1px;
+.is-typed span.cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: black;
+    animation: blink 1s infinite;
+}
+
+.is-typed span.underscore {
+    display: inline-flex;
+    width: 10px;
+    height: 1px;
+    align-items: flex-end;
+    background-color: black;
+    animation: blink 1s infinite;
+}
+
+.is-typed span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    49% {
         background-color: black;
-        animation: blink 1s infinite;
     }
-
-    .is-typed span.underscore {
-        display: inline-flex;
-        width: 10px;
-        height: 1px;
-        align-items:flex-end;
-        background-color: black;
-        animation: blink 1s infinite;
+    50% {
+        background-color: transparent;
     }
-
-    .is-typed span.cursor.typing {
-        animation: none;
+    99% {
+        background-color: transparent;
     }
-
-    @keyframes blink {
-        49% {
-            background-color: black;
-        }
-        50% {
-            background-color: transparent;
-        }
-        99% {
-            background-color: transparent;
-        }
-    }
+}
 </style>

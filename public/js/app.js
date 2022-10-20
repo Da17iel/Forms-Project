@@ -21885,7 +21885,7 @@ var _hoisted_1 = {
   "class": "flex flex-col w-full h-full"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Post erstellen");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Post erstellen ");
 
 var _hoisted_3 = {
   "class": "shadow"
@@ -22180,7 +22180,7 @@ var _hoisted_15 = {
   "class": "my-4"
 };
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Whoops! Something went wrong.")], -1
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, "Whoops! Something went wrong.")], -1
 /* HOISTED */
 );
 
@@ -22221,13 +22221,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         onClick: _cache[0] || (_cache[0] = function () {
           return $options.OpenForm && $options.OpenForm.apply($options, arguments);
         })
-      }, "Edit")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.ShowProfileEdit ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("<li v-show=\"errors.ProfilePicture\">{{ errors.ProfilePicture }}</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors.username), 513
+      }, "Edit ")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.ShowProfileEdit ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("<li v-show=\"errors.ProfilePicture\">{{ errors.ProfilePicture }}</li>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors.username), 513
       /* TEXT, NEED_PATCH */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $props.errors.username]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors.email), 513
       /* TEXT, NEED_PATCH */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $props.errors.email]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors.status), 513
       /* TEXT, NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $props.errors.status]])], 512
+      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $props.errors.status]])])], 512
       /* NEED_PATCH */
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, Object.keys($props.errors).length > 0]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
         onSubmit: _cache[5] || (_cache[5] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
@@ -22879,7 +22879,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ntable[data-v-8f266f4a] {\n        font-family: arial, sans-serif;\n        border-collapse: collapse;\n        width: 100%;\n}\ntd[data-v-8f266f4a], th[data-v-8f266f4a] {\n        border: 1px solid #dddddd;\n        text-align: left;\n        padding: 8px;\n}\ntr[data-v-8f266f4a]:nth-child(even) {\n        background-color: #dddddd;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ntable[data-v-8f266f4a] {\n    font-family: arial, sans-serif;\n    border-collapse: collapse;\n    width: 100%;\n}\ntd[data-v-8f266f4a], th[data-v-8f266f4a] {\n    border: 1px solid #dddddd;\n    text-align: left;\n    padding: 8px;\n}\ntr[data-v-8f266f4a]:nth-child(even) {\n    background-color: #dddddd;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22903,7 +22903,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.is-typed span.cursor {\r\n        display: inline-block;\r\n        width: 1px;\r\n        background-color: black;\r\n        -webkit-animation: blink 1s infinite;\r\n                animation: blink 1s infinite;\n}\n.is-typed span.underscore {\r\n        display: inline-flex;\r\n        width: 10px;\r\n        height: 1px;\r\n        align-items:flex-end;\r\n        background-color: black;\r\n        -webkit-animation: blink 1s infinite;\r\n                animation: blink 1s infinite;\n}\n.is-typed span.cursor.typing {\r\n        -webkit-animation: none;\r\n                animation: none;\n}\n@-webkit-keyframes blink {\n49% {\r\n            background-color: black;\n}\n50% {\r\n            background-color: transparent;\n}\n99% {\r\n            background-color: transparent;\n}\n}\n@keyframes blink {\n49% {\r\n            background-color: black;\n}\n50% {\r\n            background-color: transparent;\n}\n99% {\r\n            background-color: transparent;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.is-typed span.cursor {\n    display: inline-block;\n    width: 1px;\n    background-color: black;\n    -webkit-animation: blink 1s infinite;\n            animation: blink 1s infinite;\n}\n.is-typed span.underscore {\n    display: inline-flex;\n    width: 10px;\n    height: 1px;\n    align-items: flex-end;\n    background-color: black;\n    -webkit-animation: blink 1s infinite;\n            animation: blink 1s infinite;\n}\n.is-typed span.cursor.typing {\n    -webkit-animation: none;\n            animation: none;\n}\n@-webkit-keyframes blink {\n49% {\n        background-color: black;\n}\n50% {\n        background-color: transparent;\n}\n99% {\n        background-color: transparent;\n}\n}\n@keyframes blink {\n49% {\n        background-color: black;\n}\n50% {\n        background-color: transparent;\n}\n99% {\n        background-color: transparent;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -1,5 +1,5 @@
 <template>
-    <Head title="Create a Post" />
+    <Head title="Create a Post"/>
 
     <Layout>
         <div class="bg-gray-200">
@@ -11,7 +11,7 @@
                 <form method="post" @submit.prevent="submit" class="mt-6">
 
                     <div>
-                        <BreezeValidationErrors />
+                        <BreezeValidationErrors/>
                     </div>
 
                     <div class="w-4/6">
@@ -22,14 +22,18 @@
 
                         <div>
                             <BreezeLabel for="category" value="Kategorie: " class="mt-4"/>
-                            <select name="category" id="category" v-model="form.category" class="border-0 rounded w-full">
-                                <option v-for="category in categories" :key="category.id" :value="category.name">{{ category.name }}</option>
+                            <select name="category" id="category" v-model="form.category"
+                                    class="border-0 rounded w-full">
+                                <option v-for="category in categories" :key="category.id" :value="category.name">
+                                    {{ category.name }}
+                                </option>
                             </select>
                         </div>
 
                         <div>
                             <BreezeLabel for="content" value="Inhalt: " class="mt-4"/>
-                            <textarea id="content" type="textarea" v-model="form.content" rows="9" class="border-0 rounded w-full"/>
+                            <textarea id="content" type="textarea" v-model="form.content" rows="9"
+                                      class="border-0 rounded w-full"/>
                         </div>
 
                         <div>
@@ -53,7 +57,7 @@ import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
-import { Head, useForm } from '@inertiajs/inertia-vue3';
+import {Head, useForm} from '@inertiajs/inertia-vue3';
 
 export default {
     name: "CreatePost",

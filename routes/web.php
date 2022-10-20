@@ -39,7 +39,7 @@ Route::get('/forum/post/{post:slug}', [PostController::class, 'SinglePost']);
 Route::post('/forum/post/{post:slug}', [CommentController::class, 'create']);
 
 Route::get('/forum/create-post', [PostController::class, 'ShowCreatePost'])
-->middleware('auth');
+    ->middleware('auth');
 
 Route::post('/forum/create-post', [PostController::class, 'create']);
 
@@ -49,11 +49,11 @@ Route::get('/forum/category/{category:slug}', [CategoryController::class, 'ShowC
 Route::get('/forum/user/{user:username}', [UserConroller::class, 'UserProfile']);
 
 Route::get('/forum/my-profile', [UserConroller::class, 'MyProfile'])
-->middleware('auth');
+    ->middleware('auth');
 
 Route::post('/forum/my-profile', [UserConroller::class, 'UpdateProfile']);
 
 // Other Routes
 Route::get('/forum/search', [ForumFunctions::class, 'SearchPage']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

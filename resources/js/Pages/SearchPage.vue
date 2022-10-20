@@ -17,7 +17,8 @@
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
-import { Head } from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/inertia-vue3';
+
 export default {
     name: "SearchPage",
     components: {

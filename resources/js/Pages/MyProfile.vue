@@ -1,5 +1,5 @@
 <template>
-    <Head title="My Profile" />
+    <Head title="My Profile"/>
 
     <Layout>
         <div class="flex flex-col items-center">
@@ -22,18 +22,21 @@
                         class="inline-flex items-center px-4 py-2 border rounded-md font-semibold text-xs mt-4
                                    uppercase tracking-widest hover:bg-gray-100 active:bg-gray-100 focus:outline-none
                                    focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150"
-                        @click="OpenForm">Edit</button>
+                        @click="OpenForm">Edit
+                    </button>
                 </div>
 
                 <div v-if="ShowProfileEdit">
                     <h1 class="mb-4">Edit your Profile</h1>
 
                     <div id="Errors" v-show="Object.keys(errors).length > 0" class="my-4">
-                        <b><p>Whoops! Something went wrong.</p></b>
-                        <!--<li v-show="errors.ProfilePicture">{{ errors.ProfilePicture }}</li>-->
-                        <li v-show="errors.username">{{ errors.username }}</li>
-                        <li v-show="errors.email">{{ errors.email }}</li>
-                        <li v-show="errors.status">{{ errors.status }}</li>
+                        <p><b>Whoops! Something went wrong.</b></p>
+                        <ul>
+                            <!--<li v-show="errors.ProfilePicture">{{ errors.ProfilePicture }}</li>-->
+                            <li v-show="errors.username">{{ errors.username }}</li>
+                            <li v-show="errors.email">{{ errors.email }}</li>
+                            <li v-show="errors.status">{{ errors.status }}</li>
+                        </ul>
                     </div>
 
                     <form @submit.prevent="submit">
@@ -43,18 +46,21 @@
                         </div>-->
 
                         <div>
-                            <BreezeLabel for="username" value="Username" />
-                            <BreezeInput id="username" type="text" class="mt-1 block w-full" v-model="form.username" required autofocus />
+                            <BreezeLabel for="username" value="Username"/>
+                            <BreezeInput id="username" type="text" class="mt-1 block w-full" v-model="form.username"
+                                         required autofocus/>
                         </div>
 
                         <div>
-                            <BreezeLabel for="email" value="Email" />
-                            <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required />
+                            <BreezeLabel for="email" value="Email"/>
+                            <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email"
+                                         required/>
                         </div>
 
                         <div>
-                            <BreezeLabel for="status" value="Status" />
-                            <BreezeInput id="status" type="text" class="mt-1 block w-full" v-model="form.status" required />
+                            <BreezeLabel for="status" value="Status"/>
+                            <BreezeInput id="status" type="text" class="mt-1 block w-full" v-model="form.status"
+                                         required/>
                         </div>
 
                         <div id="Buttons" class="mt-2">
@@ -92,7 +98,7 @@ import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
-import { Head, useForm } from '@inertiajs/inertia-vue3';
+import {Head, useForm} from '@inertiajs/inertia-vue3';
 
 export default {
     name: "MyProfile",

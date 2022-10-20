@@ -1,12 +1,13 @@
 <template>
-    <Head :title="category.name" />
+    <Head :title="category.name"/>
 
     <Layout>
         <div class="flex flex-col w-full h-full">
             <Link
                 class="p-2 border rounded-lg border-gray-400 hover:border-gray-900 self-end"
                 href="/forum/create-post"
-            >Post erstellen</Link>
+            >Post erstellen
+            </Link>
             <table class="shadow">
                 <tr>
                     <th class="w-32">Zustand</th>
@@ -26,7 +27,9 @@
 
                     <!-- Title -->
                     <td>
-                        <p class="font-bold"><Link :href="'/forum/post/' + post.slug">{{ post.title }}</Link></p>
+                        <p class="font-bold">
+                            <Link :href="'/forum/post/' + post.slug">{{ post.title }}</Link>
+                        </p>
                         Ansichten: <i>{{ post.views }}</i>
                     </td>
 
@@ -47,7 +50,8 @@
 
 <script>
 import Layout from '@/Layouts/ForumLayout.vue';
-import { Head } from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/inertia-vue3';
+
 export default {
     name: "ForumTableView",
     components: {
@@ -62,19 +66,19 @@ export default {
 </script>
 
 <style scoped>
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
 
-    tr:nth-child(even) {
-        background-color: #dddddd;
-    }
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 </style>
