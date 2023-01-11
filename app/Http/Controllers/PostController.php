@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -39,6 +40,7 @@ class PostController extends Controller
         return Inertia::render('SinglePost', [
             'post' => $post,
             'comments' => $post->comments,
+            'replies' => Comment::all(),
             'users' => User::all(),
             'author' => $post->author,
             'category' => $post->category,

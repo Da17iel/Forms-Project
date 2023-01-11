@@ -25,7 +25,7 @@ class CommentFactory extends Factory
         if (rand(0, 1)) {
             $postId = Post::all()->random();
         } else {
-            $commentId = rand(1, 500);
+            $commentId = rand(1, 20);
         }
         return [
             "user_id" => User::all()->random(),
