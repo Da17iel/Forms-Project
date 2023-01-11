@@ -1,8 +1,8 @@
 <template>
-    <div v-for="comment in comments" :key="comment.id" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
+    <div v-for="comment in comments" :key="comment.id" class="bg-gray-50 p-4 mt-4 border border-gray-400 rounded drop-shadow-md">
 
         <!-- Display of original comment -->
-        <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
+        <div class="flex flex-row mb-4 bg-gray-200 p-2 rounded inline-block">
             <img :src="'/SampleProfilePictures/' + users[(comment.user_id - 1)].ProfilePicture"
                  alt="Profile Picture" class="rounded h-12">
             <p class="ml-4 self-center">
@@ -16,10 +16,10 @@
         </div>
 
         <!-- Form to reply to a comment -->
-        <div v-if="loggedIn">
-            <button v-show="showingComment !== comment.id" @click="showReply(comment.id)">Antworten</button>
+        <div v-if="loggedIn" class="mt-4">
+            <button v-show="showingComment !== comment.id" @click="showReply(comment.id)" class="underline underline-offset-4 hover:text-blue-800 ease-out duration-150">Antworten</button>
             <form v-if="showingComment === comment.id" method="post" @submit.prevent="submitReply(comment.id)">
-                <BreezeInput id="ReplyToComment" type="text" v-model="ReplyContent" class="mr-2" autofocus/>
+                <BreezeInput id="ReplyToComment" type="text" v-model="ReplyContent" class="mr-2 w-1/2" autofocus/>
                 <BreezeButton>Reply</BreezeButton>
             </form>
         </div>

@@ -1,7 +1,7 @@
 <template>
     <!-- For Loop for all replies a comment has -->
     <div v-for="reply in replies" :key="reply.id" >
-        <div v-if="reply.comment_id === comment.id" class="bg-gray-50 p-4 mt-4 rounded drop-shadow-md">
+        <div v-if="reply.comment_id === comment.id" class="bg-gray-50 p-4 mt-4 border border-gray-300 rounded drop-shadow-md">
             <div class="flex flex-row mb-4 bg-gray-100 p-2 rounded inline-block">
                 <img :src="'/SampleProfilePictures/' + users[(reply.user_id - 1)].ProfilePicture"
                      alt="Profile Picture" class="rounded h-12">

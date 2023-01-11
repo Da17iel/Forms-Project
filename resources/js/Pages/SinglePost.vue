@@ -16,10 +16,18 @@
         <p class="text-2xl pt-10 pb-4">Antworten:</p>
 
         <div v-if="loggedIn">
-            <p>Write a comment: </p>
             <form method="post" @submit.prevent="submit" class="w-full">
-                <BreezeInput id="comment" type="text" v-model="CommentContent" class="w-auto mr-2"/>
-                <BreezeButton>Comment</BreezeButton>
+                <BreezeInput id="comment"
+                             type="text"
+                             v-model="CommentContent"
+                             class="w-1/2 mr-2 rounded-none
+                                    border-0 border-b border-gray-800
+                                    focus:ring-0"
+                             @focus="CommentFocused = true"
+                             @blur="CommentFocused = false"
+                             placeholder="Eine Antwort erfassen..."
+                             autocomplete="off"/>
+                <BreezeButton v-show="CommentFocused">Comment</BreezeButton>
             </form>
         </div>
 
@@ -50,6 +58,7 @@ export default {
                 }
             ),
             CommentContent: '',
+            CommentFocused: false,
         }
     },
     props: {
